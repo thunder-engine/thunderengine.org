@@ -1,0 +1,22 @@
+---
+layout: page
+title: Blog
+---
+
+<div class="blog-feed">
+  <ul class="fa-ul">
+{% for post in site.posts %}
+<li>
+  <a href="{{ site.baseurl }}{{ post.url }}">
+    <span class="fa-li"><i class="fa fa-arrow-circle-left"></i></span>
+  </a>
+  <h2>
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      {{ post.title }}
+    </a>
+  </h2>
+  <span class="post-date">{{ post.date | date_to_long_string }}</span>
+</li>
+{% endfor %}
+</ul>
+</div>

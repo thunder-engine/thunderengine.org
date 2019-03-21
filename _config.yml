@@ -1,0 +1,58 @@
+# Name of website
+title: Thunder Engine
+
+# Short description of your site
+description: An opensource game engine
+
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+# avatar: "/img/avatar-icon.png"
+
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter
+# title-img: /path/to/image
+
+social-network-links:
+#  rss: true
+#  email: "someone@example.com"
+#  facebook: daattali
+#  github: daattali
+#  twitter: daattali
+#  reddit: yourname
+#  google-plus: 
+#  linkedin: daattali
+#  xing: yourname
+#  stackoverflow: ""
+#  snapchat: 
+#  instagram: 
+#  youtube: 
+#  spotify: yourname
+#  telephone: 
+#  steam: 
+#  twitch: yourname
+#  yelp: yourname
+
+# Select which share links to show in posts
+share-links-active:
+#  twitter: true
+#  facebook: true
+#  google: false
+#  linkedin: true
+
+# --- Web Statistics Section --- #
+
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
+#gtag: ""
+
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+theme: jekyll-theme-cayman
+plugins:
+#  - jekyll-paginate
+  - jekyll-feed
+  
+#gems: [jekyll-paginate]
