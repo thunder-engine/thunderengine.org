@@ -1,0 +1,217 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Style the header and navigation */
+header, footer {
+    background-color: #424242; /* Header color */
+    color: #fff;
+    padding: 10px 0;
+	display: flex;
+}
+
+header img {
+	display: block;
+	width: 140px;
+	height: auto;
+	object-fit: contain;
+}
+
+section {
+    padding: 20px 20px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:link, a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.right-nav {
+	display: flex;
+	align-items: center;
+}
+
+.language-selection {
+	margin: 0 40px 0 100px;
+	white-space: nowrap;
+}
+
+.language-span {
+	cursor:pointer;
+	color:#fff
+}
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 1200px;
+	text-align: center;
+	padding: 100px 0 50px 0;
+}
+
+.content h2 {
+	text-align: center;
+}
+
+.content p {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	opacity: 0.70;
+}
+
+.content-card {
+	display: table;
+	width: 100%;
+	overflow: hidden;
+}
+
+.content-block {
+	background: #fff;
+	display: table-cell;
+	width: 50%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.content-block h3 {
+	margin: 0 auto;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.content-block p {
+	max-width: 360px;
+}
+
+.content-block img {
+	width: 100%;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.content-header {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	width: 100%;
+	max-width: 1200px;
+	overflow: visible;
+	padding: 10px !important;
+}
+
+#about {
+	background-color: #424242; /* Header color */
+    color: #fff;
+}
+
+#ready {
+	background-image: url('imges/space-corridor.png');
+    background-size: cover;
+    background-position: center;
+	background-attachment: fixed;
+	color: #fff;
+	padding: 0;
+	text-align: center;
+}
+
+.ready-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff; /* Header color */
+}
+
+.ready-content p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Style the hero section */
+#hero {
+    background-image: url('imges/space-corridor.png');
+    background-size: cover;
+    background-position: center;
+	background-attachment: fixed;
+    color: #fff;
+	padding: 0;
+    text-align: center;
+}
+
+.hero-content {
+	background-color: #000a;
+	padding: 100px 0;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff; /* Header color */
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #0277BD; /* Button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.social-icons {
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 20px 0;
+}
