@@ -61,7 +61,6 @@ a:hover, a:active {
 }
 
 .language-selection {
-	margin: 0 40px 0 100px;
 	white-space: nowrap;
 }
 
@@ -90,15 +89,22 @@ a:hover, a:active {
 	padding-right: 10px;
 	padding-left: 10px;
 	font-size: 16px;
-	text-align: justify;
+	text-align: left;
 	line-height: 25px;
 	opacity: 0.70;
 }
 
 .content-card {
-	display: table;
-	width: 100%;
+	position: relative;
 	overflow: hidden;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.content-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
 }
 
 .content-block {
@@ -111,12 +117,12 @@ a:hover, a:active {
 
 .content-block h3 {
 	margin: 0 auto;
-	padding-right: 10px;
-	padding-left: 10px;
+	padding: 20px;
 }
 
 .content-block p {
 	max-width: 360px;
+	padding: 20px;
 }
 
 .content-block img {
