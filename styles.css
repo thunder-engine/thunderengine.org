@@ -103,7 +103,6 @@ a:hover, a:active {
 
 .content-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
 }
 
@@ -147,6 +146,41 @@ a:hover, a:active {
 #about {
 	background-color: #424242; /* Header color */
     color: #fff;
+}
+
+.about-grid {
+	display: grid;
+}
+
+.about-block {
+	display: table-cell;
+	height: 100%;
+	border-radius: 0px 0px 8px 8px;
+	background: #616161;
+}
+
+.about-center-block {
+	display: flex;
+	height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-center-block p {
+	max-width: 360px;
+	padding: 20px;
+}
+
+.about-img-block {
+	display: table-cell;
+	height: 100%;
+}
+
+.about-img-block img {
+	width: 100%;
+	vertical-align: middle;
+	margin: 0;
+	border-radius: 8px 8px 0px 0px;
 }
 
 #ready {
@@ -220,4 +254,26 @@ a:hover, a:active {
 	align-items: flex-start;
 	gap: 10px;
 	padding: 20px 0;
+}
+
+@media (min-width: 600px) {
+	.content-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+}
+
+@media (min-width: 1020px) {
+	.content-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.about-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.about-block {
+		border-radius: 0px 8px 8px 0px;
+	}
+	.about-img-block img {
+		border-radius: 8px 0px 0px 8px;
+	}
 }
