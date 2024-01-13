@@ -145,6 +145,18 @@ a:hover, a:active {
 	padding: 10px !important;
 }
 
+.content-button {
+	display: inline-block;
+	margin: 20px 0px;
+	font-weight: bold;
+}
+
+#read-more {
+	/*!position: absolute;*/
+	bottom: 0;
+	width: 100%;
+}
+
 #about {
 	background-color: #424242; /* Header color */
     color: #fff;
@@ -231,11 +243,6 @@ a:hover, a:active {
 .hero-content p {
     font-size: 16px;
     margin-bottom: 40px;
-}
-
-.content-button {
-	display: inline-block;
-	margin: 20px;
 }
 
 .cta-button {
