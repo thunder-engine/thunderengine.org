@@ -122,6 +122,10 @@ a:hover, a:active {
 	padding: 20px;
 }
 
+.content-block a {
+	color: #333
+}
+
 .content-block img {
 	width: 100%;
 	vertical-align: middle;
@@ -227,6 +231,11 @@ a:hover, a:active {
 .hero-content p {
     font-size: 16px;
     margin-bottom: 40px;
+}
+
+.content-button {
+	display: inline-block;
+	margin: 20px;
 }
 
 .cta-button {
