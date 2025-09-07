@@ -1,17 +1,19 @@
 function onPageLoad() {
 	function changeLanguage(selectedLanguage) {
+		// Hero section
 		var downloadButton = document.getElementById("download-button");
-		var readyButton = document.getElementById("ready-button");
 		
 		var heroTitle = document.getElementById("hero-title");
 		var heroParagraph = document.getElementById("hero-paragraph");
 		
+		// About section
 		var aboutTitle = document.getElementById("about-title");
 		var aboutParagraph = document.getElementById("about-paragraph");
 		
+		// Description section
 		var descTitle = document.getElementById("desc-title");
-		var ossTitle = document.getElementById("oss-title");
-		var ossParagraph = document.getElementById("oss-paragraph");
+		var freeTitle = document.getElementById("free-title");
+		var freeParagraph = document.getElementById("free-paragraph");
 		var crossTitle = document.getElementById("cross-title");
 		var crossParagraph = document.getElementById("cross-paragraph");
 		var editorTitle = document.getElementById("editor-title");
@@ -23,12 +25,26 @@ function onPageLoad() {
 		var gitTitle = document.getElementById("git-title");
 		var gitParagraph = document.getElementById("git-paragraph");
 		
-		var readyTitle = document.getElementById("ready-title");
-		var readyParagraph1 = document.getElementById("ready-paragraph1");
-		var readyParagraph2 = document.getElementById("ready-paragraph2");
-
+		// Contribute section
+		var ossTitle = document.getElementById("oss-title");
+		var ossParagraph = document.getElementById("oss-paragraph");
+		
+		var statContributors = document.getElementById("stat-contributors");
+		var statStars = document.getElementById("stat-stars");
+		var statPulls = document.getElementById("stat-pulls");
+		
+		var codeTitle = document.getElementById("code-title");
+		var codeParagraph = document.getElementById("code-paragraph");
+		
+		var writeTitle = document.getElementById("write-title");
+		var writeParagraph = document.getElementById("write-paragraph");
+		
+		var reportTitle = document.getElementById("report-title");
+		var reportParagraph = document.getElementById("report-paragraph");
+		
 		if (selectedLanguage === "en") {
-			readyButton.textContent = downloadButton.textContent = "Download Now";
+			// Hero section
+			downloadButton.textContent = "Download Now";
 			
 			heroTitle.textContent = "Thunder Engine: Unleash Your Game Development Creativity";
 			heroParagraph.textContent = "Welcome to Thunder Engine, your gateway to limitless game development possibilities!";
@@ -36,9 +52,10 @@ function onPageLoad() {
 			aboutTitle.textContent = "What is Thunder Engine?";
 			aboutParagraph.textContent = "Thunder Engine is a game-changer in the world of game development. It's a free and open-source multi-functional lightweight game engine that empowers creators to craft stunning 2D and 3D games effortlessly. Our mission is to simplify game development so that you can focus on what you do best - creating captivating games!";
 			
+			// Description section
 			descTitle.textContent = "Why Thunder Engine?";
-			ossTitle.textContent = "Free Open Source Game Engine";
-			ossParagraph.textContent = "Say goodbye to licensing fees and restrictions! Thunder Engine is completely free for all purposes. Whether you're a hobbyist, indie developer, or part of a game studio, you can harness the full power of Thunder Engine without breaking the bank.";
+			freeTitle.textContent = "Free Open Source Game Engine";
+			freeParagraph.textContent = "Say goodbye to licensing fees and restrictions! Thunder Engine is completely free for all purposes. Whether you're a hobbyist, indie developer, or part of a game studio, you can harness the full power of Thunder Engine without breaking the bank.";
 			
 			crossTitle.textContent = "Cross-Platform";
 			crossParagraph.textContent = "Thunder Engine provides the ability to create games for various platforms, including Windows, macOS, Linux, iOS, Android, and more. Our powerful game engine ensures that your game will work on any device.";
@@ -55,11 +72,26 @@ function onPageLoad() {
 			gitTitle.textContent = "GitHub Integration";
 			gitParagraph.textContent = "Collaboration is at the heart of Thunder Engine. Our GitHub integration allows you to connect with a vibrant community of developers, share your projects, and access a treasure trove of open-source resources. Together, we can elevate game development to new heights!";
 			
-			readyTitle.textContent = "Ready to Get Started?";
-			readyParagraph1.textContent = "Don't miss out on the opportunity to revolutionize your game development journey. Join the Thunder Engine community today and unlock the full potential of your creativity!";
-			readyParagraph2.textContent = "Download Now and embark on your game development adventure with Thunder Engine.";
+			// Contribute section
+			ossTitle.textContent = "Become a part of Thunder Engine";
+			ossParagraph.textContent = "Join a community of innovators and like-minded creators! Here, every idea is valued and your initiatives will be supported. Together, we are building the future of game technology.";
+			
+			statContributors.textContent = "Contributors";
+			statStars.textContent = "Stars on GitHub";
+			statPulls.textContent = "Pull requests";
+			
+			codeTitle.textContent = "Code";
+			codeParagraph.textContent = "Bring your ideas to life and leave your mark on the engine's evolution! Your code could become the foundation for future games created by thousands of developers worldwide. Don't just fix bugs — create new possibilities.";
+			
+			writeTitle.textContent = "Document";
+			writeParagraph.textContent = "Help other developers easily harness the power of the Thunder Engine! Your clear explanations and guides will save others countless hours and help the community grow faster. Become a guide into the world of game development technology.";
+			
+			reportTitle.textContent = "Report";
+			reportParagraph.textContent = "Be a pioneer — find issues first and propose enhancements! Your keen eye makes the engine more stable and user-friendly for everyone. Help us craft the perfect development tool.";
+
 		} else if (selectedLanguage === "ru") {
-			readyButton.textContent = downloadButton.textContent = "Скачать";
+			// Hero section
+			downloadButton.textContent = "Скачать";
 			
 			heroTitle.textContent = "Thunder Engine: Раскрой свой потенциал в создании игр";
 			heroParagraph.textContent = "Добро пожаловать в мир Thunder Engine - вашего ключа к бескрайним возможностям в разработке игр!";
@@ -67,9 +99,10 @@ function onPageLoad() {
 			aboutTitle.textContent = "Что такое Thunder Engine?";
 			aboutParagraph.textContent = "Thunder Engine - это настоящая революция в мире создания игр. Это бесплатный и открытый исходный код многофункциональный легкий игровой движок, который дарит разработчикам способность создавать потрясающие 2D и 3D игры без труда. Наша миссия - упростить разработку игр, чтобы вы могли сосредотачиваться на том, в чем вы действительно сильны - на создании увлекательных игр!";
 			
+			// Description section
 			descTitle.textContent = "Почему Thunder Engine?";
-			ossTitle.textContent = "Бесплатный и открытый исходный код";
-			ossParagraph.textContent = "Попрощайтесь с лицензионными платежами и ограничениями! Thunder Engine полностью бесплатен для любых целей. Будь вы хобби-разработчиком, инди-разработчиком или частью игровой студии, вы можете использовать все преимущества Thunder Engine, не задумываясь о финансовых затратах.";
+			freeTitle.textContent = "Бесплатный и открытый исходный код";
+			freeParagraph.textContent = "Попрощайтесь с лицензионными платежами и ограничениями! Thunder Engine полностью бесплатен для любых целей. Будь вы хобби-разработчиком, инди-разработчиком или частью игровой студии, вы можете использовать все преимущества Thunder Engine, не задумываясь о финансовых затратах.";
 			
 			crossTitle.textContent = "Кросс-платформенный";
 			crossParagraph.textContent = "Thunder Engine обеспечивает возможность создавать игры для множества платформ, включая Windows, macOS, Linux, iOS, Android и другие. Наш мощный игровой движок гарантирует, что ваша игра будет работать на любом устройстве.";
@@ -85,12 +118,27 @@ function onPageLoad() {
 			
 			gitTitle.textContent = "Интеграция с GitHub";
 			gitParagraph.textContent = "Сотрудничество - это основа Thunder Engine. Наша интеграция с GitHub позволяет вам связаться с активным сообществом разработчиков, делиться своими проектами и получить доступ к сокровищнице ресурсов с открытым исходным кодом. Вместе мы поднимем разработку игр на новый уровень!";
+
+			// Contribute section
+			ossTitle.textContent = "Стань частью Thunder Engine";
+			ossParagraph.textContent = "Присоединяйтесь к сообществу инноваторов и единомышленников! Здесь ценят каждую идею и поддержат ваши начинания. Вместе мы создаем будущее игровых технологий.";
 			
-			readyTitle.textContent = "Готовы начать?";
-			readyParagraph1.textContent = "Не упустите шанс изменить свой путь в мире разработки игр. Присоединяйтесь к сообществу Thunder Engine уже сегодня и разблокируйте полный потенциал вашей творческой силы!";
-			readyParagraph2.textContent = "Скачайте сейчас и отправьтесь в путешествие в мир разработки игр с Thunder Engine.";
+			statContributors.textContent = "Контрибьюторов";
+			statStars.textContent = "Звёзд на GitHub";
+			statPulls.textContent = "Pull requests";
+			
+			codeTitle.textContent = "Пиши";
+			codeParagraph.textContent = "Реализуйте свои идеи и оставьте след в развитии движка! Ваш код может стать основой для будущих игр тысяч разработчиков по всему миру. Не просто исправляйте ошибки — создавайте новые возможности.";
+			
+			writeTitle.textContent = "Документируй";
+			writeParagraph.textContent = "Помогите другим разработчикам легко освоить мощь Thunder Engine! Ваши пояснения и руководства сэкономят часы времени другим и помогут сообществу расти быстрее. Станьте проводником в мир технологий.";
+			
+			reportTitle.textContent = "Сообщай";
+			reportParagraph.textContent = "Станьте первопроходцем, находите недочеты первыми и предлагайте улучшения! Ваша внимательность делает движок стабильнее и удобнее для всех. Помогите создать идеальный инструмент для разработки.";
+
 		} else if (selectedLanguage === "es") {
-			readyButton.textContent = downloadButton.textContent = "Descarga Ahora";
+			// Hero section
+			downloadButton.textContent = "Descarga Ahora";
 			
 			heroTitle.textContent = "Thunder Engine: Libera tu Creatividad en el Desarrollo de Juegos";
 			heroParagraph.textContent = "¡Bienvenido a Thunder Engine, tu puerta de entrada a posibilidades ilimitadas en el desarrollo de juegos!";
@@ -98,9 +146,10 @@ function onPageLoad() {
 			aboutTitle.textContent = "¿Qué es Thunder Engine?";
 			aboutParagraph.textContent = "Thunder Engine es una revolución en el mundo del desarrollo de juegos. Es un motor de juegos gratuito y de código abierto, multifuncional y ligero, que permite a los creadores diseñar fácilmente juegos 2D y 3D impresionantes. Nuestra misión es simplificar el desarrollo de juegos para que puedas centrarte en lo que mejor haces: ¡crear juegos cautivadores!";
 			
+			// Description section
 			descTitle.textContent = "¿Por qué Thunder Engine?";
-			ossTitle.textContent = "Motor de Juegos Gratuito y de Código Abierto";
-			ossParagraph.textContent = "Dile adiós a las tarifas de licencia y las restricciones. Thunder Engine es completamente gratuito para todos los propósitos. Ya seas un aficionado, un desarrollador independiente o formes parte de un estudio de juegos, puedes aprovechar todo el poder de Thunder Engine sin gastar un centavo.";
+			freeTitle.textContent = "Motor de Juegos Gratuito y de Código Abierto";
+			freeParagraph.textContent = "Dile adiós a las tarifas de licencia y las restricciones. Thunder Engine es completamente gratuito para todos los propósitos. Ya seas un aficionado, un desarrollador independiente o formes parte de un estudio de juegos, puedes aprovechar todo el poder de Thunder Engine sin gastar un centavo.";
 			
 			crossTitle.textContent = "Cross-Platform";
 			crossParagraph.textContent = "Thunder Engine brinda la capacidad de crear juegos para diversas plataformas, incluyendo Windows, macOS, Linux, iOS, Android y m谩s. Nuestro poderoso motor de juegos garantiza que su juego funcione en cualquier dispositivo.";
@@ -117,11 +166,26 @@ function onPageLoad() {
 			gitTitle.textContent = "Integración con GitHub";
 			gitParagraph.textContent = "La colaboración está en el corazón de Thunder Engine. Nuestra integración con GitHub te permite conectarte con una comunidad vibrante de desarrolladores, compartir tus proyectos y acceder a un tesoro de recursos de código abierto. ¡Juntos podemos elevar el desarrollo de juegos a nuevas alturas!";
 			
-			readyTitle.textContent = "¿Listo para Empezar?";
-			readyParagraph1.textContent = "No te pierdas la oportunidad de revolucionar tu trayectoria en el desarrollo de juegos. Únete a la comunidad de Thunder Engine hoy mismo y desbloquea todo el potencial de tu creatividad.";
-			readyParagraph2.textContent = "Descarga Ahora y embárcate en la aventura del desarrollo de juegos con Thunder Engine.";
+			// Contribute section
+			ossTitle.textContent = "¡Sé Parte de Thunder Engine";
+			ossParagraph.textContent = "¡Únete a una comunidad de innovadores y creadores con ideas afines! Aquí cada idea es valorada y tus iniciativas serán apoyadas. Juntos, estamos construyendo el futuro de la tecnología de videojuegos.";
+			
+			statContributors.textContent = "Contribuyentes";
+			statStars.textContent = "Estrellas en GitHub";
+			statPulls.textContent = "Pull requests";
+			
+			codeTitle.textContent = "Programa";
+			codeParagraph.textContent = "¡Da vida a tus ideas y deja tu huella en la evolución del motor! Tu código podría convertirse en la base de videojuegos futuros creados por miles de desarrolladores en todo el mundo. No solo corrijas errores, ¡crea nuevas posibilidades!";
+			
+			writeTitle.textContent = "Documenta";
+			writeParagraph.textContent = "¡Ayuda a otros desarrolladores a aprovechar fácilmente el poder de Thunder Engine! Tus explicaciones claras y guías les ahorrarán incontables horas y ayudarán a que la comunidad crezca más rápido. Conviértete en un guía en el mundo del desarrollo de videojuegos.";
+			
+			reportTitle.textContent = "Reporta";
+			reportParagraph.textContent = "¡Sé un pionero: encuentra problemas primero y propone mejoras! Tu ojo crítico hace que el motor sea más estable y fácil de usar para todos. Ayúdanos a crear la herramienta de desarrollo perfecta.";
+			
 		} else if (selectedLanguage === "fr") {
-			readyButton.textContent = downloadButton.textContent = "Téléchargez maintenant";
+			// Hero section
+			downloadButton.textContent = "Téléchargez maintenant";
 			
 			heroTitle.textContent = "Thunder Engine : Libérez votre créativité dans le développement de jeux";
 			heroParagraph.textContent = "Bienvenue dans l'univers de Thunder Engine, votre porte d'entrée vers des possibilités de développement de jeux illimitées !";
@@ -129,9 +193,10 @@ function onPageLoad() {
 			aboutTitle.textContent = "Qu'est-ce que Thunder Engine ?";
 			aboutParagraph.textContent = "Thunder Engine révolutionne le monde du développement de jeux. Il s'agit d'un moteur de jeu gratuit et open source, multifonctionnel et léger, qui permet aux créateurs de concevoir facilement des jeux 2D et 3D époustouflants. Notre mission est de simplifier le développement de jeux pour que vous puissiez vous concentrer sur ce que vous faites de mieux : créer des jeux captivants !";
 			
+			// Description section
 			descTitle.textContent = "Pourquoi Thunder Engine ?";
-			ossTitle.textContent = "Moteur de jeu gratuit et open source";
-			ossParagraph.textContent = "Dites adieu aux frais de licence et aux restrictions ! Thunder Engine est entièrement gratuit pour toutes les utilisations. Que vous soyez un amateur, un développeur indépendant ou membre d'un studio de jeux, vous pouvez exploiter toute la puissance de Thunder Engine sans vous ruiner.";
+			freeTitle.textContent = "Moteur de jeu gratuit et open source";
+			freeParagraph.textContent = "Dites adieu aux frais de licence et aux restrictions ! Thunder Engine est entièrement gratuit pour toutes les utilisations. Que vous soyez un amateur, un développeur indépendant ou membre d'un studio de jeux, vous pouvez exploiter toute la puissance de Thunder Engine sans vous ruiner.";
 			
 			crossTitle.textContent = "Cross-Platform";
 			crossParagraph.textContent = "Thunder Engine offre la possibilité de créer des jeux pour différentes plateformes, notamment Windows, macOS, Linux, iOS, Android et bien d'autres. Notre puissant moteur de jeu garantit que votre jeu fonctionnera sur n'importe quel appareil.";
@@ -148,11 +213,26 @@ function onPageLoad() {
 			gitTitle.textContent = "Intégration GitHub";
 			gitParagraph.textContent = "La collaboration est au cœur de Thunder Engine. Notre intégration avec GitHub vous permet de vous connecter à une communauté dynamique de développeurs, de partager vos projets et d'accéder à une mine de ressources open source. Ensemble, nous pouvons élever le développement de jeux à de nouveaux sommets !";
 			
-			readyTitle.textContent = "Prêt à commencer ?";
-			readyParagraph1.textContent = "Ne manquez pas l'opportunité de révolutionner votre parcours de développement de jeux. Rejoignez la communauté Thunder Engine dès aujourd'hui et débloquez tout le potentiel de votre créativité !";
-			readyParagraph2.textContent = "Téléchargez maintenant et lancez-vous dans l'aventure du développement de jeux avec Thunder Engine.";
+			// Contribute section
+			ossTitle.textContent = "Devenez Partie Intégrante de Thunder Engine";
+			ossParagraph.textContent = "Rejoignez une communauté d'innovateurs et de créateurs passionnés ! Ici, chaque idée est valorisée et vos initiatives seront soutenues. Ensemble, nous bâtissons l'avenir de la technologie du jeu vidéo.";
+			
+			statContributors.textContent = "Contributeurs";
+			statStars.textContent = "Étoiles sur GitHub";
+			statPulls.textContent = "Pull requests";
+			
+			codeTitle.textContent = "Codez";
+			codeParagraph.textContent = "Donnez vie à vos idées et laissez votre empreinte dans l'évolution du moteur ! Votre code pourrait devenir la fondation de jeux futurs créés par des milliers de développeurs à travers le monde. Ne vous contentez pas de corriger des bugs — créez de nouvelles possibilités !";
+			
+			writeTitle.textContent = "Documentez";
+			writeParagraph.textContent = "Aidez les autres développeurs à exploiter facilement la puissance de Thunder Engine ! Vos explications claires et guides leur feront gagner un temps précieux et aideront la communauté à grandir plus vite. Devenez un guide dans le monde de la technologie de développement de jeux.";
+			
+			reportTitle.textContent = "Signalez";
+			reportParagraph.textContent = "Soyez un pionnier — trouvez les problèmes en premier et proposez des améliorations ! Votre œil averti rend le moteur plus stable et convivial pour tous. Aidez-nous à forger l'outil de développement parfait.";
+			
 		} else if (selectedLanguage === "zh") {
-			readyButton.textContent = downloadButton.textContent = "立即下载";
+			// Hero section
+			downloadButton.textContent = "立即下载";
 			
 			heroTitle.textContent = "Thunder Engine ：释放你的游戏开发创造力";
 			heroParagraph.textContent = "欢迎来到 Thunder Engine 的世界，这里是您无限游戏开发可能性的门户！";
@@ -160,9 +240,10 @@ function onPageLoad() {
 			aboutTitle.textContent = "什么是 Thunder Engine？";
 			aboutParagraph.textContent = "Thunder Engine 是游戏开发世界的一次革命。它是一个免费开源、多功能轻量级的游戏引擎，可让创作者轻松创建令人惊叹的2D和3D游戏。我们的使命是简化游戏开发，让您可以专注于做您最擅长的事情 - 创造引人入胜的游戏！";
 			
+			// Description section
 			descTitle.textContent = "为什么选择 Thunder Engine？";
-			ossTitle.textContent = "免费开源游戏引擎";
-			ossParagraph.textContent = "告别许可费用和限制！Thunder Engine 完全免费，无论您是业余爱好者、独立开发者还是游戏工作室的一部分，您都可以充分利用 Thunder Engine 的全部功能，而不必花费一分钱。";
+			freeTitle.textContent = "免费开源游戏引擎";
+			freeParagraph.textContent = "告别许可费用和限制！Thunder Engine 完全免费，无论您是业余爱好者、独立开发者还是游戏工作室的一部分，您都可以充分利用 Thunder Engine 的全部功能，而不必花费一分钱。";
 			
 			crossTitle.textContent = "跨平台";
 			crossParagraph.textContent = "Thunder Engine 提供了在各种平台上创建游戏的能力，包括Windows、macOS、Linux、iOS、Android等等。我们强大的游戏引擎确保您的游戏在任何设备上都能运行。";
@@ -179,23 +260,46 @@ function onPageLoad() {
 			gitTitle.textContent = "GitHub集成";
 			gitParagraph.textContent = "合作是 Thunder Engine 的核心。我们的GitHub集成允许您与充满活力的开发者社区联系，分享您的项目并访问丰富的开源资源。一起，我们可以将游戏开发推向新的高度！";
 			
-			readyTitle.textContent = "准备好开始了吗？";
-			readyParagraph1.textContent = "不要错过改变游戏开发之旅的机会。立即加入 Thunder Engine 社区，解锁您创造力的全部潜力！";
-			readyParagraph2.textContent = "立即下载，并开始使用 Thunder Engine 踏上您的游戏开发之旅。";
+			// Contribute section
+			ossTitle.textContent = "成为Thunder Engine的一员"; 
+			ossParagraph.textContent = "加入创新者和志同道合的创造者的社区！在这里，每个想法都被重视，您的倡议将得到支持。携手共建游戏技术的未来。";
+			
+			statContributors.textContent = "贡献者";
+			statStars.textContent = "GitHub星标"; 
+			statPulls.textContent = "拉取请求"; 
+			
+			codeTitle.textContent = "编写代码"; 
+			codeParagraph.textContent = "将您的想法变为现实，在引擎的演进中留下您的印记！您的代码可能成为全球数千名开发者未来游戏的基础。不要只是修复错误——创造新的可能性！";
+			
+			writeTitle.textContent = "编写文档"; 
+			writeParagraph.textContent = "帮助其他开发者轻松掌握Thunder Engine的强大功能！您清晰的解释和指南将为他人节省无数时间，并帮助社区更快发展。成为游戏开发技术世界的引路人。";
+			
+			reportTitle.textContent = "报告问题"; 
+			reportParagraph.textContent = "成为先锋——率先发现问题并提出改进建议！您敏锐的目光使引擎对每个人来说更加稳定和友好。帮助我们打造完美的开发工具。";
 		}
 	}
+
+	const languageSwitcher = document.querySelector('.language-selection');
+	const languageBtn = document.querySelector('.language-btn');
+
+	var languageLinks = document.querySelectorAll("[data-lang]");
 
 	function changeLanguageOnClick(event) {
 		var selectedLanguage = event.target.getAttribute("data-lang");
 		
+		languageSwitcher.classList.toggle('active');
+		
 		changeLanguage(selectedLanguage);
 	}
-
-	var languageLinks = document.querySelectorAll("[data-lang]");
 
 	languageLinks.forEach(function(link) {
 		link.addEventListener("click", changeLanguageOnClick);
 	});
+	
+	languageBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        languageSwitcher.classList.toggle('active');
+    });
 }
 
 document.addEventListener("DOMContentLoaded", onPageLoad);

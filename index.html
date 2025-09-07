@@ -8,21 +8,48 @@
     <title>Thunder Engine</title>
 </head>
 <body>
+	<div class="body-image"></div>
     <header id="header">
 		<div class="content-header">
 			<img src="icons/thunderlight.svg">
 			<nav class="right-nav">
-				<div class="language-selection">
-					<span class="language-span" data-lang="en">ENG</span>
-					<span class="language-separator">|</span>
-					<span class="language-span" data-lang="fr">FRA</span>
-					<span class="language-separator">|</span>
-					<span class="language-span" data-lang="es">SPA</span>
-					<span class="language-separator">|</span>
-					<span class="language-span" data-lang="ru">РУC</span>
-					<span class="language-separator">|</span>
-					<span class="language-span" data-lang="zh">中文</span>
-				</div>
+				<ul>
+					<li>
+						<a href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z">Download</a>
+					</li>
+					<li>
+						<a href="https://doc.thunderengine.org/en/latest/" target="_blank">Docs</a>
+					</li>
+					<li>
+						<a href="https://github.com/thunder-engine/thunder" target="_blank">GitHub</a>
+					</li>
+					<li>
+						<div class="language-selection">
+							<button class="language-btn">
+								<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M3.784 11.25H8.01c.065-2.256.423-4.31.985-5.869.166-.457.352-.882.561-1.263a8.26 8.26 0 0 0-5.773 7.132m8.216-9c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m0 1.5c-.146 0-.383.08-.695.444-.309.362-.62.93-.898 1.697-.494 1.368-.83 3.243-.896 5.359h4.978c-.066-2.116-.402-3.991-.896-5.36-.277-.766-.59-1.334-.898-1.696-.312-.364-.55-.444-.695-.444m3.99 7.5c-.066-2.256-.424-4.31-.986-5.869a9 9 0 0 0-.561-1.263 8.26 8.26 0 0 1 5.773 7.132zm-1.501 1.5H9.51c.065 2.116.402 3.991.896 5.36.277.766.59 1.334.898 1.696.312.364.55.444.695.444.146 0 .383-.08.695-.444.309-.362.62-.93.898-1.697.494-1.368.83-3.243.896-5.359m-.046 7.132a9 9 0 0 0 .56-1.263c.563-1.559.92-3.613.986-5.869h4.227a8.26 8.26 0 0 1-5.773 7.132m-4.886 0a9 9 0 0 1-.56-1.263c-.563-1.559-.92-3.613-.986-5.869H3.784a8.26 8.26 0 0 0 5.773 7.132" clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<div class="language-list">
+								<div class="language-item">
+									<span class="language-name" data-lang="ru">Русский</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="en">English</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="fr">Français</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="es">Español</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="zh">中文</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</nav>
 		</div>
     </header>
@@ -31,7 +58,7 @@
             <div class="hero-content">
                 <h1 id="hero-title">Thunder Engine: Unleash Your Game Development Creativity</h1>
                 <p id="hero-paragraph">Welcome to Thunder Engine, your gateway to limitless game development possibilities!</p>
-                <a id="download-button" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" class="cta-button">Download Now</a>
+                <a id="download-button" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" target="_blank" class="cta-button">Download Now</a>
             </div>
         </section>
         <section id="about">
@@ -39,7 +66,7 @@
                 <h2 id="about-title">What is Thunder Engine?</h2>
 				<div class="about-grid">
 					<div class="about-img-block">
-						<img src="imges/gameworld.png">
+						<img src="imges/gameworld.jpg">
 					</div>
 					<div class="about-block">
 						<div class="about-center-block">
@@ -55,22 +82,22 @@
 				<div class="content-grid">
 					<div class="content-card">
 						<div class="content-block">
-							<img src="imges/open-source.png">
-							<h3 id="oss-title">Free Open Source Game Engine</h3>
-							<p id="oss-paragraph">Say goodbye to licensing fees and restrictions! Thunder Engine is completely free for all purposes. Whether you're a hobbyist, indie developer, or part of a game studio, you can harness the full power of Thunder Engine without breaking the bank.</p>
-							<a href="https://github.com/thunder-engine/thunder" class="content-button">View repository</a>
+							<img src="imges/open-source.jpg">
+							<h3 id="free-title">Free Open Source Game Engine</h3>
+							<p id="free-paragraph">Say goodbye to licensing fees and restrictions! Thunder Engine is completely free for all purposes. Whether you're a hobbyist, indie developer, or part of a game studio, you can harness the full power of Thunder Engine without breaking the bank.</p>
+							<a href="https://github.com/thunder-engine/thunder" target="_blank" class="content-button">View repository</a>
 						</div>
 					</div>
 					<div class="content-card">
 						<div class="content-block">
-							<img src="imges/modular.png">
+							<img src="imges/crossplatform.jpg">
 							<h3 id="cross-title">Cross-Platform</h3>
 							<p id="cross-paragraph">Thunder Engine provides the ability to create games for various platforms, including Windows, macOS, Linux, iOS, Android, and more. Our powerful game engine ensures that your game will work on any device.</p>
 						</div>
 					</div>
 					<div class="content-card">
 						<div class="content-block">
-							<img src="imges/editor.png">
+							<img src="imges/editor.jpg">
 							<h3 id="editor-title">Embedded Editor</h3>
 							<p id="editor-paragraph">Thunder Engine comes with an integrated editor that offers a wide range of tools for game content development. Edit graphics, fine-tune audio, and create unique worlds with ease, all in one place.</p>
 							<a href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" class="content-button">Download SDK</a>
@@ -78,37 +105,81 @@
 					</div>
 					<div class="content-card">
 						<div class="content-block">
-							<img src="imges/modular.png">
+							<img src="imges/modular.jpg">
 							<h3 id="mod-title">Modular Architecture</h3>
 							<p id="mod-paragraph">Thunder Engine offers a versatile and modular architecture that adapts to your project's unique needs. Customize your game development workflow by choosing the components that suit your creative vision. With Thunder Engine, you're in control!</p>
 						</div>
 					</div>
 					<div class="content-card">
 						<div class="content-block">
-							<img src="imges/documentation.png">
+							<img src="imges/documentation.jpg">
 							<h3 id="doc-title">Extensive Documentation</h3>
 							<p id="doc-paragraph">We understand that every developer's journey starts with learning. That's why Thunder Engine provides comprehensive and user-friendly documentation. Whether you're a seasoned pro or a newbie, our resources will guide you every step of the way.</p>
-							<a href="https://doc.thunderengine.org" class="content-button">Learn more</a>
+							<a href="https://doc.thunderengine.org" target="_blank" class="content-button">Learn more</a>
 						</div>
 					</div>
-<!--					
+					
 					<div class="content-card">
 						<div class="content-block">
-							<img src="imges/github.png">
-							<h3 id="git-title">GitHub Integration</h3>
+							<img src="imges/github.jpg">
+							<h3 id="git-title">Contribute</h3>
 							<p id="git-paragraph">Collaboration is at the heart of Thunder Engine. Our GitHub integration allows you to connect with a vibrant community of developers, share your projects, and access a treasure trove of open-source resources. Together, we can elevate game development to new heights!</p>
 						</div>
 					</div>
--->					
+				</div>
+			</div>
+		</section>
+		<section id="oss">
+			<div class="content">
+				<h2 id="oss-title">Become a part of Thunder Engine</h2>
+				<p id="oss-paragraph" style="text-align: center;">Join a community of innovators and like-minded creators! Here, every idea is valued and your initiatives will be supported. Together, we are building the future of game technology.</p>
+				
+				<div class="github-stats">
+					<div class="stat">
+						<div class="stat-number">15+</div>
+						<div id="stat-contributors" class="stat-label">Contributors</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">600+</div>
+						<div id="stat-stars" class="stat-label">Stars on GitHub</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">400+</div>
+						<div id="stat-pulls" class="stat-label">Pull requests</div>
+					</div>
+				</div>
+
+				<div class="content-grid">
+					<div class="content-card">
+						<div class="content-block">
+							<img src="imges/code.jpg">
+							<h3 id="code-title">Code</h3>
+							<p id="code-paragraph">Bring your ideas to life and leave your mark on the engine's evolution! Your code could become the foundation for future games created by thousands of developers worldwide. Don't just fix bugs — create new possibilities.</p>
+							<a href="https://github.com/thunder-engine/thunder/blob/master/CONTRIBUTING.md" target="_blank" class="content-button">Learn more</a>
+						</div>
+					</div>
+					<div class="content-card">
+						<div class="content-block">
+							<img src="imges/document.jpg">
+							<h3 id="write-title">Document</h3>
+							<p id="write-paragraph">Help other developers easily harness the power of the Thunder Engine! Your clear explanations and guides will save others countless hours and help the community grow faster. Become a guide into the world of game development technology.</p>
+							<a href="https://github.com/thunder-engine/thunder/blob/master/CONTRIBUTING.md" target="_blank" class="content-button">Learn more</a>
+						</div>
+					</div>
+					<div class="content-card">
+						<div class="content-block">
+							<img src="imges/report.jpg">
+							<h3 id="report-title">Report</h3>
+							<p id="report-paragraph">Be a pioneer — find issues first and propose enhancements! Your keen eye makes the engine more stable and user-friendly for everyone. Help us craft the perfect development tool.</p>
+							<a href="https://github.com/thunder-engine/thunder/blob/master/CONTRIBUTING.md" target="_blank" class="content-button">Learn more</a>
+						</div>
+					</div>
 				</div>
             </div>
-        </section>
+		</section>
         <section id="ready">
             <div class="hero-content">
-                <h2 id="ready-title">Ready to Get Started?</h2>
-                <p id="ready-paragraph1">Don't miss out on the opportunity to revolutionize your game development journey. Join the Thunder Engine community today and unlock the full potential of your creativity!</p>
-				<p id="ready-paragraph2">Download Now and embark on your game development adventure with Thunder Engine.</p>
-				<a id="ready-button" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" class="cta-button">Download Now</a>
+
             </div>
         </section>
     </main>
@@ -129,7 +200,7 @@
 				<a href="https://github.com/thunder-engine/thunder/discussions" target="_blank">Ask a question</a>
 			</div>
 			<hr>
-			<p>Thunder Engine - Copyright &copy; 2010-2023 Evgeniy Prikazchikov</p>
+			<p id="copyright">Thunder Engine - Copyright &copy; 2010-2023 Evgeniy Prikazchikov</p>
         </div>
     </footer>
 </body>

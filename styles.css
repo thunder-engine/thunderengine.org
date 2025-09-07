@@ -1,22 +1,44 @@
 /* Reset some default styles */
 body, h1, p {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    fill: white;
 }
 
 /* Set a background color and font styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+	font-family: Arial, sans-serif;
+	background-color: #13495C;
+	color: #333;
+}
+
+.body-image {
+	background-image: linear-gradient(to bottom, transparent 70%, #13495C 100%), url('imges/hero.jpg');
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	max-width: 100%;
+	z-index: -1;
+	height: 788px;
+	width: 100%;
 }
 
 /* Style the header and navigation */
-header, footer {
-    background-color: #424242; /* Header color */
-    color: #fff;
-    padding: 10px 0;
+header {
+	background-color: #424242A0;
+	backdrop-filter: blur(10px);
+	color: #fff;
+	padding: 10px 0;
 	display: flex;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
 }
 
 header img {
@@ -26,23 +48,32 @@ header img {
 	object-fit: contain;
 }
 
+footer {
+	background-color: #424242A0;
+	color: #fff;
+	padding: 10px 0;
+	display: flex;
+	width: 100%;
+}
+
 section {
-    padding: 20px 20px;
+	padding: 20px 20px;
 }
 
 nav ul {
-    list-style: none;
-    text-align: center;
+	display: flex;
+	align-items: center;
+	list-style: none;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav li {
+	margin-right: 20px;
+	
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
+	text-decoration: none;
+	color: #fff;
 }
 
 a:link, a:visited {
@@ -99,6 +130,7 @@ a:hover, a:active {
 	overflow: hidden;
 	height: 100%;
 	border-radius: 8px;
+	color: #333;
 }
 
 .content-grid {
@@ -110,6 +142,7 @@ a:hover, a:active {
 	background: #fff;
 	height: 100%;
 	vertical-align: middle;
+	padding-bottom: 50px;
 }
 
 .content-block h3 {
@@ -138,7 +171,7 @@ a:hover, a:active {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 1000;
+	z-index: 100;
 	width: 100%;
 	max-width: 1200px;
 	overflow: visible;
@@ -149,6 +182,11 @@ a:hover, a:active {
 	display: inline-block;
 	margin: 20px 0px;
 	font-weight: bold;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
 }
 
 #read-more {
@@ -158,8 +196,29 @@ a:hover, a:active {
 }
 
 #about {
-	background-color: #424242; /* Header color */
-    color: #fff;
+	background-color: #424242A0;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+	color: #fff;
+	max-width: 1400px;
+	margin: 0px auto;
+	border-radius: 8px 8px 0px 0px;
+}
+
+#desc {
+	background-color: #F0F0F0;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	max-width: 1400px;
+	margin: 0px auto;
+}
+
+#oss {
+	background-color: #424242A0;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	color: #fff;
+	max-width: 1400px;
+	margin: 0px auto;
+	border-radius: 0px 0px 8px 8px;
 }
 
 .about-grid {
@@ -170,14 +229,14 @@ a:hover, a:active {
 	display: table-cell;
 	height: 100%;
 	border-radius: 0px 0px 8px 8px;
-	background: #616161;
+	background: #FFFFFF20;
 }
 
 .about-center-block {
 	display: flex;
 	height: 100%;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .about-center-block p {
@@ -198,61 +257,60 @@ a:hover, a:active {
 }
 
 #ready {
-	background-image: url('imges/space-corridor.png');
-    background-size: cover;
-    background-position: center;
-	background-attachment: fixed;
 	color: #fff;
 	padding: 0;
 	text-align: center;
 }
 
 .ready-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #fff; /* Header color */
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #fff; /* Header color */
 }
 
 .ready-content p {
-    font-size: 16px;
-    margin-bottom: 40px;
+	font-size: 16px;
+	margin-bottom: 40px;
 }
 
 /* Style the hero section */
 #hero {
-    background-image: url('imges/space-corridor.png');
-    background-size: cover;
-    background-position: center;
-	background-attachment: fixed;
-    color: #fff;
+	color: #fff;
 	padding: 0;
-    text-align: center;
+	text-align: center;
 }
 
 .hero-content {
-	background-color: #000a;
-	padding: 100px 0;
+	background-color: #0000;
+	padding: 220px 0px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #fff; /* Header color */
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #fff; /* Header color */
 }
 
 .hero-content p {
-    font-size: 16px;
-    margin-bottom: 40px;
+	font-size: 16px;
+	margin-bottom: 40px;
+}
+
+.hero-content a:link {
+	color: #2C8197;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #0277BD; /* Button color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 20px;
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #fff;
+	text-decoration: none;
+	border-radius: 8px;
+	font-size: 20px;
 }
 
 .social-icons {
@@ -269,6 +327,77 @@ a:hover, a:active {
 	gap: 10px;
 	padding: 20px 0;
 }
+
+.github-stats {
+    display: flex;
+    gap: 20px;
+    margin: 40px;
+    flex-wrap: wrap;
+	justify-content: center;
+}
+
+.stat {
+    background: #FFFFFF20;
+    padding: 15px 20px;
+    border-radius: 8px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4fc3f7;
+    margin-bottom: 5px;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.language-list {
+    position: absolute;
+	padding: 20px;
+    background-color: #424242A0;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 200;
+}
+
+.language-selection.active .language-list {
+	opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+	backdrop-filter: blur(20px);
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+	border-radius: 8px;
+}
+
+.language-item:hover {
+    background: #FFFFFF40;
+ }
+ 
+ #copyright {
+	 max-width: inherit;
+	 padding-left: 0px;
+ }
 
 @media (min-width: 600px) {
 	.content-grid {
