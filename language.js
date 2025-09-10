@@ -39,7 +39,9 @@ class LanguageSwitcher {
 			meta.content = this.currentLanguage;
 			
             localStorage.setItem('userLanguage', lang);
-        } catch (e) { }
+        } catch (e) { 
+			console.warn('Unable to save current language');
+		}
     }
 	
 	switchLanguage(lang) {
