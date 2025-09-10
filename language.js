@@ -1,5 +1,79 @@
-function onPageLoad() {
-	function changeLanguage(selectedLanguage) {
+class LanguageSwitcher {
+	constructor() {
+        this.supportedLanguages = ['en', 'ru', 'es', 'fr', 'zh'];
+        this.defaultLanguage = 'en';
+        this.currentLanguage = this.getLanguageFromStorage() || this.detectLanguage();
+    }
+	
+	detectLanguage() {
+        const browserLanguage = navigator.language || navigator.userLanguage;
+        const languages = navigator.languages || [browserLanguage];
+        
+        for (let lang of languages) {
+            const simplifiedLang = lang.split('-')[0].toLowerCase();
+            
+            if (this.supportedLanguages.includes(simplifiedLang)) {
+                return simplifiedLang;
+            }
+        }
+        
+        return this.defaultLanguage;
+    }
+	
+	getLanguageFromStorage() {
+        try {
+            return localStorage.getItem('userLanguage');
+        } catch (e) {
+            return null;
+        }
+    }
+	
+	saveLanguage() {
+		try {
+			let meta = document.querySelector('meta[http-equiv="content-language"]');
+			if (!meta) {
+				meta = document.createElement('meta');
+				meta.httpEquiv = "content-language";
+				document.head.appendChild(meta);
+			}
+			meta.content = this.currentLanguage;
+			
+            localStorage.setItem('userLanguage', lang);
+        } catch (e) { }
+    }
+	
+	switchLanguage(lang) {
+		if (this.supportedLanguages.includes(lang)) {
+			this.currentLanguage = lang;
+			this.saveLanguage();
+			this.applyLanguage();
+			//this.updateLanguageSelector();
+		}
+	}
+	
+	bindEvents() {
+		const languageSwitcher = document.querySelector('.language-selection');
+		const languageBtn = document.querySelector('.language-btn');
+
+		var languageLinks = document.querySelectorAll("[data-lang]");
+
+		languageLinks.forEach(button => {
+			button.addEventListener("click", (e) => {
+				var selectedLanguage = event.target.getAttribute("data-lang");
+			
+				languageSwitcher.classList.toggle('active');
+			
+				this.switchLanguage(selectedLanguage);
+			});
+		});
+		
+		languageBtn.addEventListener('click', function(e) {
+			e.stopPropagation();
+			languageSwitcher.classList.toggle('active');
+		});
+	}
+	
+	applyLanguage() {
 		// Hero section
 		var downloadButton = document.getElementById("download-button");
 		
@@ -42,7 +116,7 @@ function onPageLoad() {
 		var reportTitle = document.getElementById("report-title");
 		var reportParagraph = document.getElementById("report-paragraph");
 		
-		if (selectedLanguage === "en") {
+		if (this.currentLanguage === "en") {
 			// Hero section
 			downloadButton.textContent = "Download Now";
 			
@@ -89,7 +163,7 @@ function onPageLoad() {
 			reportTitle.textContent = "Report";
 			reportParagraph.textContent = "Be a pioneer — find issues first and propose enhancements! Your keen eye makes the engine more stable and user-friendly for everyone. Help us craft the perfect development tool.";
 
-		} else if (selectedLanguage === "ru") {
+		} else if (this.currentLanguage === "ru") {
 			// Hero section
 			downloadButton.textContent = "Скачать";
 			
@@ -136,7 +210,7 @@ function onPageLoad() {
 			reportTitle.textContent = "Сообщай";
 			reportParagraph.textContent = "Станьте первопроходцем, находите недочеты первыми и предлагайте улучшения! Ваша внимательность делает движок стабильнее и удобнее для всех. Помогите создать идеальный инструмент для разработки.";
 
-		} else if (selectedLanguage === "es") {
+		} else if (this.currentLanguage === "es") {
 			// Hero section
 			downloadButton.textContent = "Descarga Ahora";
 			
@@ -183,7 +257,7 @@ function onPageLoad() {
 			reportTitle.textContent = "Reporta";
 			reportParagraph.textContent = "¡Sé un pionero: encuentra problemas primero y propone mejoras! Tu ojo crítico hace que el motor sea más estable y fácil de usar para todos. Ayúdanos a crear la herramienta de desarrollo perfecta.";
 			
-		} else if (selectedLanguage === "fr") {
+		} else if (this.currentLanguage === "fr") {
 			// Hero section
 			downloadButton.textContent = "Téléchargez maintenant";
 			
@@ -230,7 +304,7 @@ function onPageLoad() {
 			reportTitle.textContent = "Signalez";
 			reportParagraph.textContent = "Soyez un pionnier — trouvez les problèmes en premier et proposez des améliorations ! Votre œil averti rend le moteur plus stable et convivial pour tous. Aidez-nous à forger l'outil de développement parfait.";
 			
-		} else if (selectedLanguage === "zh") {
+		} else if (this.currentLanguage === "zh") {
 			// Hero section
 			downloadButton.textContent = "立即下载";
 			
@@ -278,28 +352,11 @@ function onPageLoad() {
 			reportParagraph.textContent = "成为先锋——率先发现问题并提出改进建议！您敏锐的目光使引擎对每个人来说更加稳定和友好。帮助我们打造完美的开发工具。";
 		}
 	}
-
-	const languageSwitcher = document.querySelector('.language-selection');
-	const languageBtn = document.querySelector('.language-btn');
-
-	var languageLinks = document.querySelectorAll("[data-lang]");
-
-	function changeLanguageOnClick(event) {
-		var selectedLanguage = event.target.getAttribute("data-lang");
-		
-		languageSwitcher.classList.toggle('active');
-		
-		changeLanguage(selectedLanguage);
-	}
-
-	languageLinks.forEach(function(link) {
-		link.addEventListener("click", changeLanguageOnClick);
-	});
-	
-	languageBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        languageSwitcher.classList.toggle('active');
-    });
 }
 
-document.addEventListener("DOMContentLoaded", onPageLoad);
+const languageSwitcher = new LanguageSwitcher();
+
+document.addEventListener('DOMContentLoaded', () => {
+	languageSwitcher.applyLanguage();
+	languageSwitcher.bindEvents();
+});
