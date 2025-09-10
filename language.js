@@ -29,16 +29,16 @@ class LanguageSwitcher {
     }
 	
 	saveLanguage() {
-		try {
-			let meta = document.querySelector('meta[http-equiv="content-language"]');
-			if (!meta) {
-				meta = document.createElement('meta');
-				meta.httpEquiv = "content-language";
-				document.head.appendChild(meta);
-			}
-			meta.content = this.currentLanguage;
+		let meta = document.querySelector('meta[http-equiv="content-language"]');
+		if (!meta) {
+			meta = document.createElement('meta');
+			meta.httpEquiv = "content-language";
+			document.head.appendChild(meta);
+		}
+		meta.content = this.currentLanguage;
 			
-            localStorage.setItem('userLanguage', lang);
+		try {
+            localStorage.setItem('userLanguage', this.currentLanguage);
         } catch (e) { 
 			console.warn('Unable to save current language');
 		}
