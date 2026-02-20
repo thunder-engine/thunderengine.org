@@ -300,7 +300,7 @@ a:hover, a:active {
 	margin-bottom: 40px;
 }
 
-.hero-content a:link {
+.hero-content a:link, .hero-content a:visited {
 	color: #2C8197;
 }
 
