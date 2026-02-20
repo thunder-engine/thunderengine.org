@@ -7,7 +7,6 @@ include:
   - _pages
 
 markdown: kramdown
-google_analytics: "G-F5768C316N"
 
 plugins:
   - jekyll-feed
