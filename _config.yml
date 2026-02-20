@@ -1,0 +1,13 @@
+title: Thunder Engine
+description: >-
+  Free and open-source multi-functional lightweight game engine.
+baseurl: ""
+url: "https://thunderengine.org"
+
+include:
+  - _pages
+
+markdown: kramdown
+theme: minima # или другая тема, можно оставить без темы
+plugins:
+  - jekyll-feed

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать приложение для вашей ОС</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        p {
+            color: #555;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .download-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .download-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .os-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .os-name {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-windows { background: #0078d7; }
+        .btn-mac { background: #555; }
+        .btn-linux { background: #e95420; }
+        .btn-android { background: #a4c639; }
+        .btn-ios { background: #007aff; }
+        
+        .manual-select {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .manual-select h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .loader {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .detection-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Скачайте наше приложение</h1>
+        <p>Мы определили вашу операционную систему и предлагаем наиболее подходящую версию приложения</p>
+        
+        <div class="detection-status">
+            <div class="loader"></div>
+            <span id="status">Определяем вашу операционную систему...</span>
+        </div>
+        
+        <div id="download-container" style="display: none;">
+            <!-- Контент будет сгенерирован JavaScript -->
+        </div>
+        
+        <div class="manual-select">
+            <h3>Или выберите вручную:</h3>
+            <button class="btn btn-windows" data-os="Windows">Windows</button>
+            <button class="btn btn-mac" data-os="MacOS">MacOS</button>
+            <button class="btn btn-linux" data-os="Linux">Linux</button>
+            <button class="btn btn-android" data-os="Android">Android</button>
+            <button class="btn btn-ios" data-os="iOS">iOS</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Функция для определения ОС из User Agent
+            function detectOS() {
+                const userAgent = window.navigator.userAgent;
+                const platform = window.navigator.platform;
+                
+                if (/Win/.test(platform)) {
+                    return 'Windows';
+                }
+                
+                if (/Mac/.test(platform)) {
+                    return 'MacOS';
+                }
+                
+                if (/Linux/.test(platform)) {
+                    return 'Linux';
+                }
+                
+                return 'Unknown';
+            }
+            
+            // Функция для получения ссылки для скачивания в зависимости от ОС
+            function getDownloadLink(os) {
+                const links = {
+                    'Windows': 'https://example.com/download/windows/app-setup.exe',
+                    'MacOS': 'https://example.com/download/mac/app-installer.dmg',
+                    'Linux': 'https://example.com/download/linux/app.tar.gz',
+                };
+                
+                return links[os] || 'https://example.com/download';
+            }
+            
+            // Функция для получения иконки ОС
+            function getOSIcon(os) {
+                const icons = {
+                    'Windows': '🪟',
+                    'MacOS': '🍎',
+                    'Linux': '🐧'
+                };
+                
+                return icons[os] || '💻';
+            }
+            
+            // Функция для отображения соответствующей ссылки
+            function showDownloadLink(os) {
+                const statusElement = document.getElementById('status');
+                const container = document.getElementById('download-container');
+                
+                statusElement.textContent = `Определено: ${os}`;
+                
+                const downloadLink = getDownloadLink(os);
+                const osIcon = getOSIcon(os);
+                
+                container.innerHTML = `
+                    <div class="download-card">
+                        <div class="os-icon">${osIcon}</div>
+                        <div class="os-name">Для ${os}</div>
+                        <p>Рекомендуемая версия для вашей операционной системы</p>
+                        <a href="${downloadLink}" class="btn ${getButtonClass(os)}">Скачать для ${os}</a>
+                    </div>
+                `;
+                
+                container.style.display = 'block';
+                
+                // Плавное появление
+                setTimeout(() => {
+                    container.style.opacity = 1;
+                    container.style.transform = 'translateY(0)';
+                }, 100);
+            }
+            
+            // Функция для получения класса кнопки
+            function getButtonClass(os) {
+                const classes = {
+                    'Windows': 'btn-windows',
+                    'MacOS': 'btn-mac',
+                    'Linux': 'btn-linux'
+                };
+                
+                return classes[os] || '';
+            }
+            
+            // Определяем ОС и показываем ссылку
+            const os = detectOS();
+            
+            // Имитируем задержку определения для наглядности
+            setTimeout(() => {
+                showDownloadLink(os);
+            }, 1500);
+            
+            // Добавляем обработчики для ручного выбора
+            document.querySelectorAll('.manual-select .btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedOS = this.getAttribute('data-os');
+                    showDownloadLink(selectedOS);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

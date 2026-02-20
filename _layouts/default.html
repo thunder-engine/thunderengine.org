@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="favicon.ico">
+		<script src="language.js"></script>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Thunder Engine</title>
+</head>
+<body>
+	<div class="body-image"></div>
+    <header id="header">
+		<div class="content-header">
+			<img src="icons/thunderlight.svg">
+			<nav class="right-nav">
+				<ul>
+					<li>
+						<a href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z">Download</a>
+					</li>
+					<li>
+						<a href="https://docs.thunderengine.org/" target="_blank">Docs</a>
+					</li>
+					<li>
+						<a href="https://github.com/thunder-engine/thunder" target="_blank">GitHub</a>
+					</li>
+					<li>
+						<div class="language-selection">
+							<button class="language-btn">
+								<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M3.784 11.25H8.01c.065-2.256.423-4.31.985-5.869.166-.457.352-.882.561-1.263a8.26 8.26 0 0 0-5.773 7.132m8.216-9c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m0 1.5c-.146 0-.383.08-.695.444-.309.362-.62.93-.898 1.697-.494 1.368-.83 3.243-.896 5.359h4.978c-.066-2.116-.402-3.991-.896-5.36-.277-.766-.59-1.334-.898-1.696-.312-.364-.55-.444-.695-.444m3.99 7.5c-.066-2.256-.424-4.31-.986-5.869a9 9 0 0 0-.561-1.263 8.26 8.26 0 0 1 5.773 7.132zm-1.501 1.5H9.51c.065 2.116.402 3.991.896 5.36.277.766.59 1.334.898 1.696.312.364.55.444.695.444.146 0 .383-.08.695-.444.309-.362.62-.93.898-1.697.494-1.368.83-3.243.896-5.359m-.046 7.132a9 9 0 0 0 .56-1.263c.563-1.559.92-3.613.986-5.869h4.227a8.26 8.26 0 0 1-5.773 7.132m-4.886 0a9 9 0 0 1-.56-1.263c-.563-1.559-.92-3.613-.986-5.869H3.784a8.26 8.26 0 0 0 5.773 7.132" clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<div class="language-list">
+								<div class="language-item">
+									<span class="language-name" data-lang="ru">Русский</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="en">English</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="fr">Français</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="es">Español</span>
+								</div>
+								<div class="language-item">
+									<span class="language-name" data-lang="zh">中文</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+    </header>
+	
+	{{ content }}
+
+    <footer>
+        <div class="content">
+			<div class="right-nav" style="justify-content: end;">
+				<a href="#header"><img src="icons/arrow-top.svg" height="12"> BACK TO TOP</a>
+			</div>
+            <div class="social-icons">
+				<a href="https://github.com/thunder-engine/thunder" target="_blank"><img src="icons/github.svg" width="32"></a>
+                <a href="https://discord.gg/k8qsJxnw4Q" target="_blank"><img src="icons/discord.svg" width="32"></a>
+            </div>
+			<div class="links">
+				<h3>Support</h3>
+				<a href="https://docs.thunderengine.org/" target="_blank">Documentation</a>
+				<a href="https://github.com/thunder-engine/thunder/issues" target="_blank">Issues</a>
+				<a href="https://github.com/thunder-engine/thunder/projects/1" target="_blank">Roadmap</a>
+				<a href="https://github.com/thunder-engine/thunder/discussions" target="_blank">Ask a question</a>
+			</div>
+			<hr>
+			<p id="copyright">Thunder Engine - Copyright &copy; 2010-2026 Evgeniy Prikazchikov</p>
+        </div>
+    </footer>
+</body>
+</html>
