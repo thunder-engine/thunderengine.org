@@ -6,8 +6,6 @@ url: "https://thunderengine.org"
 include:
   - _pages
 
-markdown: kramdown
-
 plugins:
   - jekyll-feed
   

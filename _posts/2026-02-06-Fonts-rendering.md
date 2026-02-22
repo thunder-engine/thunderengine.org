@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Рендеринг текста - новый подход для малых шрифтов
-image: http://thunderengine.org/media/2026-02-06.jpg
+image: /media/2026-02-06.jpg
 categories: [blog]
 pinned: false
 ---
