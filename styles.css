@@ -420,3 +420,54 @@ a:hover, a:active {
 		border-radius: 8px 0px 0px 8px;
 	}
 }
+
+/* Blog Post Styles */
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 20px 40px 20px;
+}
+
+.post-header {
+    margin-bottom: 1.5rem;
+}
+
+.post-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1.5rem;
+}
+
+.post-content {
+    line-height: 1.7;
+    color: #fff;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content h2,
+.post-content h3 {
+    margin-top: 1.8rem;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
