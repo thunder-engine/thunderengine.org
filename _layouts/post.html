@@ -3,12 +3,14 @@ layout: default
 ---
 
 <section id="hero">
-    <div class="hero-content"/>
+    <div class="hero-content">
+        <h1 id="hero-title">>{{ page.title }}</h1>
+        <p id="hero-paragraph">Welcome to Thunder Engine, your gateway to limitless game development possibilities!</p>
+        <a id="download-button" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" target="_blank" class="cta-button">Download Now</a>
+    </div>
 </section>
 <section id="about">
 	<header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
-
 		<div class="post-meta">
 			<time datetime="{{ page.date | date_to_xmlschema }}">
 				{{ page.date | date: "%d %B %Y" }}
