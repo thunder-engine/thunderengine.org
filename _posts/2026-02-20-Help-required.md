@@ -3,7 +3,7 @@ layout: post
 title: Друзья, нужна помощь с сайтом Thunder Engine!
 image: /media/Thunder.png
 categories:
-  - blog
+  - Blog
 pinned: false
 ---
 Хочу сделать официальный сайт движка лучше и полезнее для вас.

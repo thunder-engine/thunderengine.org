@@ -3,7 +3,10 @@ layout: post
 title: Мысли вслух о том, что делает код продуктом
 image: /media/GitHub.png
 categories:
-  - blog
+  - Blog
+tags:
+  - Community
+  - Development
 pinned: true
 ---
 Последние несколько дней я много размышлял о пройденном пути и о том, сколько ещё предстоит сделать.

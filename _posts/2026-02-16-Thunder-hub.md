@@ -3,7 +3,11 @@ layout: post
 title: Thunder Hub - новый инструмент для управления проектами
 image: /media/2026-02-16.jpg
 categories:
-  - blog
+  - Blog
+tags:
+  - Development
+  - Hub
+  - Tools  
 pinned: false
 ---
 Прошедшая неделя прошла под необычным знаком — я решил взять паузу в разработке движка и посвятить время возрождению проекта **Thunder Hub**.
