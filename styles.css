@@ -212,6 +212,14 @@ a:hover, a:active {
 	margin: 0px auto;
 }
 
+#post {
+	background-color: #F0F0F0;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	max-width: 1400px;
+	margin: 0px auto;
+	border-radius: 8px;
+}
+
 #oss {
 	background-color: #424242A0;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
@@ -392,18 +400,17 @@ a:hover, a:active {
 
 .language-item:hover {
     background: #FFFFFF40;
- }
+}
  
- #copyright {
-	 max-width: inherit;
-	 padding-left: 0px;
- }
+#copyright {
+    max-width: inherit;
+	padding-left: 0px;
+}
 
 @media (min-width: 600px) {
 	.content-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	
 }
 
 @media (min-width: 1020px) {
@@ -419,55 +426,4 @@ a:hover, a:active {
 	.about-img-block img {
 		border-radius: 8px 0px 0px 8px;
 	}
-}
-
-/* Blog Post Styles */
-
-.blog-post {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 120px 20px 40px 20px;
-}
-
-.post-header {
-    margin-bottom: 1.5rem;
-}
-
-.post-title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-}
-
-.post-meta {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 1.5rem;
-}
-
-.post-content {
-    line-height: 1.7;
-    color: #fff;
-}
-
-.post-content p {
-    margin-bottom: 1rem;
-}
-
-.post-content h2,
-.post-content h3 {
-    margin-top: 1.8rem;
-}
-
-.post-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-.post-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.2);
 }
