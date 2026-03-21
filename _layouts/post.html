@@ -4,9 +4,16 @@ layout: default
 
 <section id="hero">
     <div class="hero-content">
+		<a href="#category" target="_blank" class="cta-button">{{ category }}</a>
         <h1>{{ page.title }}</h1>
-        <p id="hero-paragraph">Welcome to Thunder Engine, your gateway to limitless game development possibilities!</p>
-        <a id="download-button" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" target="_blank" class="cta-button">Download Now</a>
+		{% for tag in site.tags %}
+		  <h3>{{ tag[0] }}</h3>
+		  <ul>
+			{% for post in tag[1] %}
+			  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		  </ul>
+		{% endfor %}
     </div>
 </section>
 <section id="about">
