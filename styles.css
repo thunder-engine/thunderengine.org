@@ -114,7 +114,7 @@ a:hover, a:active {
 	text-align: center;
 }
 
-.content p {
+.content p, .content ul {
 	max-width: 960px;
 	margin: 0 auto;
 	padding-top: 20px;
@@ -124,6 +124,10 @@ a:hover, a:active {
 	text-align: left;
 	line-height: 25px;
 	opacity: 0.70;
+}
+
+.content ul {
+	padding-left: 50px;
 }
 
 .content-card {
@@ -216,9 +220,66 @@ a:hover, a:active {
 #post {
 	background-color: #F0F0F0;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-	max-width: 1400px;
+	max-width: 1000px;
 	margin: 0px auto;
 	border-radius: 8px;
+}
+
+.post-hero {
+	background-color: #0000;
+	text-align: left;
+	padding-top: 200px;
+	padding-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	z-index: 1;
+}
+
+.post-hero h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.post-hero time {
+	margin-left: 10px;
+}
+
+.post-hero a:hover {
+	text-decoration: none;
+}
+
+.post-tag {
+	display: inline-block;
+	padding: 4px 16px;
+	background-color: #ffffff26;
+	text-decoration: none;
+	border-radius: 16px;
+	font-size: 16px;
+}
+
+.post-content {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 1200px;
+	padding: 20px 0 50px 0;
+}
+
+.post-content p, .post-content ul {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 16px;
+	text-align: left;
+	line-height: 25px;
+	opacity: 0.70;
+}
+
+.post-content ul {
+	padding-left: 50px;
 }
 
 #oss {
@@ -320,15 +381,6 @@ a:hover, a:active {
 	text-decoration: none;
 	border-radius: 8px;
 	font-size: 20px;
-}
-
-.hero-tag {
-	display: inline-block;
-	padding: 10px 30px;
-	background-color: #80ffffff;
-	text-decoration: none;
-	border-radius: 16px;
-	font-size: 16px;
 }
 
 .social-icons {
