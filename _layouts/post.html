@@ -2,59 +2,48 @@
 layout: default
 ---
 
-<article class="blog-post">
+<section class="about">
+	<header class="post-header">
+		<h1 class="post-title">{{ page.title }}</h1>
 
-<header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+		<div class="post-meta">
+			<time datetime="{{ page.date | date_to_xmlschema }}">
+				{{ page.date | date: "%d %B %Y" }}
+			</time>
 
-    <div class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-            {{ page.date | date: "%d %B %Y" }}
-        </time>
+			{% if page.author %}
+			<span class="post-author"> by {{ page.author }}</span>
+			{% endif %}
 
-        {% if page.author %}
-        <span class="post-author"> by {{ page.author }}</span>
-        {% endif %}
+			{% if page.categories %}
+			<span class="post-categories">
+				in
+				{% for category in page.categories %}
+				<a href="/blog/category/{{ category | slugify }}">
+					{{ category }}
+				</a>{% unless forloop.last %}, {% endunless %}
+				{% endfor %}
+			</span>
+			{% endif %}
+		</div>
+	</header>
 
-        {% if page.categories %}
-        <span class="post-categories">
-            in
-            {% for category in page.categories %}
-            <a href="/blog/category/{{ category | slugify }}">
-                {{ category }}
-            </a>{% unless forloop.last %}, {% endunless %}
-            {% endfor %}
-        </span>
-        {% endif %}
-    </div>
-</header>
+	<div class="post-content">
+		{{ content }}
+	</div>
 
-<div class="post-content">
-    {{ content }}
-</div>
-
-<footer class="post-footer">
-
-<nav class="post-navigation">
-
-<div class="nav-previous">
-{% if page.previous %}
-<a href="{{ page.previous.url }}" rel="prev">
-← {{ page.previous.title }}
-</a>
-{% endif %}
-</div>
-
-<div class="nav-next">
-{% if page.next %}
-<a href="{{ page.next.url }}" rel="next">
-{{ page.next.title }} →
-</a>
-{% endif %}
-</div>
-
-</nav>
-
-</footer>
-
-</article>
+	<footer class="post-footer">
+		<nav class="post-navigation">
+			<div class="nav-previous">
+			{% if page.previous %}
+			<a href="{{ page.previous.url }}" rel="prev">← {{ page.previous.title }}</a>
+				{% endif %}
+			</div>
+			<div class="nav-next">
+				{% if page.next %}
+				<a href="{{ page.next.url }}" rel="next">{{ page.next.title }} →</a>
+				{% endif %}
+			</div>
+		</nav>
+	</footer>
+</section>
