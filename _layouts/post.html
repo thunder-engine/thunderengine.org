@@ -5,6 +5,7 @@ layout: default
 <section id="hero">
     <div class="hero-content">
 		<a href="#category" target="_blank" class="cta-button">{{ category }}</a>
+		<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time>
         <h1>{{ page.title }}</h1>
 		{% for tag in site.tags %}
 		  <h3>{{ tag[0] }}</h3>
@@ -19,10 +20,6 @@ layout: default
 <section id="about">
 	<header class="post-header">
 		<div class="post-meta">
-			<time datetime="{{ page.date | date_to_xmlschema }}">
-				{{ page.date | date: "%d %B %Y" }}
-			</time>
-
 			{% if page.author %}
 			<span class="post-author"> by {{ page.author }}</span>
 			{% endif %}
@@ -43,19 +40,7 @@ layout: default
 	<div class="post-content">
 		{{ content }}
 	</div>
-
-	<footer class="post-footer">
-		<nav class="post-navigation">
-			<div class="nav-previous">
-			{% if page.previous %}
-			<a href="{{ page.previous.url }}" rel="prev">← {{ page.previous.title }}</a>
-				{% endif %}
-			</div>
-			<div class="nav-next">
-				{% if page.next %}
-				<a href="{{ page.next.url }}" rel="next">{{ page.next.title }} →</a>
-				{% endif %}
-			</div>
-		</nav>
-	</footer>
+</section>
+<section id="ready">
+    <div class="hero-content"/>
 </section>
