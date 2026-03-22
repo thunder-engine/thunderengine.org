@@ -3,7 +3,13 @@ layout: default
 title: Все категории
 permalink: /categories/
 ---
-
+<section id="hero">
+	<div class="post-hero">
+		<h1>Категория: {{ page.title }}</h1>
+	</div>
+</section>
+<section id="post">
+	<div class="post-content">
 {% for category in site.categories %}
   <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
   <ul>
@@ -14,3 +20,8 @@ permalink: /categories/
     {% endfor %}
   </ul>
 {% endfor %}
+	</div>
+</section>
+<section id="ready">
+    <div class="hero-content" />
+</section>
