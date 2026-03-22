@@ -3,12 +3,6 @@ layout: default
 ---
 <section id="hero">
     <div class="post-hero">
-		{% if page.categories %}
-			{% for category in page.categories %}
-				<a href="#" class="post-tag">{{ category }}</a>
-				{% unless forloop.last %}, {% endunless %}
-			{% endfor %}
-		{% endif %}
 		<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time>
 		{% if page.author %}<span> by {{ page.author }}</span>{% endif %}
         <h1>{{ page.title }}</h1>
