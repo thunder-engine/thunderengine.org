@@ -3,11 +3,6 @@ description: Free and open-source multi-functional lightweight game engine.
 baseurl: ""
 url: "https://thunderengine.org"
 
-collections:
-  categories:
-    output: true
-    permalink: /category/:name/
-
 include:
   - _pages
 
