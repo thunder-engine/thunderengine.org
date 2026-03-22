@@ -6,7 +6,7 @@ url: "https://thunderengine.org"
 collections:
   categories:
     output: true
-    permalink: /categories/:name/
+    permalink: /category/:name/
 
 include:
   - _pages
@@ -15,8 +15,5 @@ plugins:
   - jekyll-feed
   
 feed:
-  categories:
-    - blog
-    - learn
-  posts_limit: 10
+  posts_limit: 20
   
