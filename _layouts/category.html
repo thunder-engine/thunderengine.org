@@ -9,11 +9,9 @@ layout: default
 <section id="post">
 	<div class="post-content">
     {% for category in site.categories %}
-		{% assign category_name = category[0] %}
-		{% assign posts = category[1] %}
-		<h3>{{ category_name }}</h3>
+		<h3>{{ category.first }}</h3>
 		<div class="post-meta">
-			{% for post in posts %}
+			{% for post in category.last %}
 			<span class="tag">{{ post.title }}</span>
 			{% endfor %}
 		</div>
