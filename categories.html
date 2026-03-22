@@ -1,23 +1,25 @@
 ---
 layout: default
-title: Все категории
-permalink: /categories/
+title: Thunder Engine Development Blog
+permalink: /blog/
 ---
 <section id="hero">
 	<div class="post-hero" />
 </section>
 <section id="post">
 	<div class="post-content">
-{% for category in site.categories %}
-		<h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
-		<ul>
-		{% for post in category[1] %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-			<li>{{ post.excerpt }}</li>
-			<li><img src="post.image"/></li>
-		{% endfor %}
-		</ul>
+		<div class="content-grid">
+{% for post in site.posts %}
+			<div class="content-card">
+				<div class="content-block">
+					<img src="{{ post.image }}">
+					<h3 id="editor-title">{{ post.title }}</h3>
+					<p id="editor-paragraph">{{ post.excerpt }}</p>
+					<a href="{{ post.url }}" class="content-button">Read More</a>
+				</div>
+			</div>
 {% endfor %}
+		</div>
 	</div>
 </section>
 <section id="ready">
