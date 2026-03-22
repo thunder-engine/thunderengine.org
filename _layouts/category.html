@@ -9,12 +9,12 @@ layout: default
 <section id="post">
 	<div class="post-content">
     {% for category in site.categories %}
-		<h3>{{ category.title }}</h3>
-		<div class="post-meta">
+		<h3>{{ category[0] }}</h3>
+		<ul>
 			{% for post in category.posts %}
-			<span class="tag">{{ post.title }}</span>
+			<li><span class="tag">{{ post.title }}</li>
 			{% endfor %}
-		</div>
+		</ul>
     {% endfor %}
 	
 	{% for tag in site.tags %}
