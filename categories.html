@@ -4,21 +4,19 @@ title: Все категории
 permalink: /categories/
 ---
 <section id="hero">
-	<div class="post-hero">
-		<h1>Категория: {{ page.title }}</h1>
-	</div>
+	<div class="post-hero" />
 </section>
 <section id="post">
 	<div class="post-content">
 {% for category in site.categories %}
-  <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
-  <ul>
-    {% for post in category[1] %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+		<h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+		<ul>
+		{% for post in category[1] %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			<li>{{ post.excerpt }}</li>
+			<li><img src="post.image"/></li>
+		{% endfor %}
+		</ul>
 {% endfor %}
 	</div>
 </section>
