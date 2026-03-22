@@ -12,9 +12,10 @@ layout: default
 		<h3>{{ category.title }}</h3>
 		<ul>
 			{% for posts in category %}
+				<h3>{{ posts.title }}</h3>
 				{% for post in posts %}
 					<li>{{ post.title }}</li>
-				{% endfor %}	
+				{% endfor %}
 			{% endfor %}
 		</ul>
     {% endfor %}
