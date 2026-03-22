@@ -9,9 +9,9 @@ layout: default
 <section id="post">
 	<div class="post-content">
     {% for cat in site.categories %}
-		<h3>{{ cat[0] }}</h3>
+		<h3>{{ cat }}</h3>
 		<ul>
-			{% for post in cat.posts %}
+			{% for post in site.categories[cat] %}
 			<li><span class="tag">{{ post.title }}</li>
 			{% endfor %}
 		</ul>
