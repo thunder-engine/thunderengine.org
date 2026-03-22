@@ -2,8 +2,7 @@
 layout: post
 title: Мысли вслух о том, что делает код продуктом
 image: /media/GitHub.png
-categories:
-  - Blog
+categories: [Blog]
 tags:
   - Community
   - Development
