@@ -8,11 +8,13 @@ layout: default
 </section>
 <section id="post">
 	<div class="post-content">
-    {% for cat in site.categories %}
-		<h3>{{ cat }}</h3>
+    {% for category in site.categories %}
+		<h3>{{ category.title }}</h3>
 		<ul>
-			{% for post in site.categories[cat] %}
-			<li><span class="tag">{{ post.title }}</li>
+			{% for posts in category %}
+				{% for post in posts %}
+					<li>{{ post.title }}</li>
+				{% endfor %}	
 			{% endfor %}
 		</ul>
     {% endfor %}
