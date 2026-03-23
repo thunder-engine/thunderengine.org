@@ -1,27 +1,30 @@
 ---
 layout: post
-title: Thunder Hub - новый инструмент для управления проектами
+title: Thunder Hub - a new project management tool
 image: /media/2026-02-16.jpg
 tags:
   - Development
   - Hub
 pinned: false
 ---
-Прошедшая неделя прошла под необычным знаком — я решил взять паузу в разработке движка и посвятить время возрождению проекта **Thunder Hub**.
+The past week has been unusual — I decided to take a break from engine development and dedicate my time to reviving the **Thunder Hub** project.
 
-**Что такое Thunder Hub?**
-Это отдельный проект, своего рода **лаунчер для редактора**, который призван облегчить взаимодействие с вашими проектами и версиями движка.
+![Thunder Hub](/media/2026-02-16.jpg)
 
-**🔧 Основные возможности:**
-- Управление проектами Thunder Engine
-- Контроль установленных версий движка
-- Скачивание новых релизов
-- Удобный запуск редактора
+**What is Thunder Hub?**  
+It's a separate project, a kind of **editor launcher**, designed to simplify interaction with your projects and engine versions.
 
-**Почему отдельный проект?**
-Ранее похожий функционал был встроен в сам редактор на QML. Но с постепенным отказом от QML в движке было принято решение выделить лаунчер в самостоятельное приложение.
+**🔧 Key features:**
 
-**Текущий статус:**
-Работы ещё не завершены, **но основной функционал уже работает вполне стабильно**!
+- Thunder Engine project management
+- Control over installed engine versions
+- Downloading new releases
+- Convenient editor launch
 
-Thunder Hub станет удобной точкой входа в экосистему движка. А чего не хватает вам для комфортной работы с проектами?
+**Why a separate project?**  
+Previously, similar functionality was built into the editor itself using QML. However, with the gradual move away from QML in the engine, the decision was made to make the launcher a standalone application.
+
+**Current status:**  
+Work is not yet complete, **but the core functionality is already quite stable**!
+
+Thunder Hub will become a convenient entry point to the engine's ecosystem. What features do you think are missing for comfortable project management?
