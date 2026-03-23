@@ -7,19 +7,17 @@ permalink: /blog/
 	<div class="post-hero" />
 </section>
 <section id="post">
-	<div class="post-content">
-		<div class="content-grid">
+	<div class="content-grid">
 {% for post in site.posts %}
-			<div class="content-card">
-				<div class="content-block">
-					<img src="{{ post.image }}">
-					<h3 id="editor-title">{{ post.title }}</h3>
-					<p id="editor-paragraph">{{ post.excerpt }}</p>
-					<a href="{{ post.url }}" class="content-button">Read More</a>
-				</div>
+		<div class="content-card">
+			<div class="content-block">
+				<img src="{{ post.image }}">
+				<h3 id="editor-title">{{ post.title }}</h3>
+				{{ post.excerpt }}
+				<a href="{{ post.url }}" class="content-button">Read More</a>
 			</div>
-{% endfor %}
 		</div>
+{% endfor %}
 	</div>
 </section>
 <section id="ready">

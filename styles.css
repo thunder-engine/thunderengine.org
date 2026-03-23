@@ -165,9 +165,11 @@ a:hover, a:active {
 }
 
 .content-block img {
+	height: 200px;
 	width: 100%;
 	vertical-align: middle;
 	margin: 0;
+	object-fit: cover;
 }
 
 .content-header {
