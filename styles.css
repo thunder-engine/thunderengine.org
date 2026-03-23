@@ -158,6 +158,10 @@ a:hover, a:active {
 .content-block p {
 	max-width: 360px;
 	padding: 20px;
+	font-size: 16px;
+	text-align: left;
+	line-height: 25px;
+	opacity: 0.70;
 }
 
 .content-block a {
