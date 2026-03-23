@@ -241,10 +241,6 @@ a:hover, a:active {
 	margin-bottom: 20px;
 }
 
-.post-hero time {
-	margin-left: 10px;
-}
-
 .post-hero a:hover {
 	text-decoration: none;
 }
@@ -256,6 +252,7 @@ a:hover, a:active {
 	text-decoration: none;
 	border-radius: 16px;
 	font-size: 16px;
+	margin-right: 5px;
 }
 
 .post-content {
@@ -275,11 +272,17 @@ a:hover, a:active {
 	font-size: 16px;
 	text-align: left;
 	line-height: 25px;
-	opacity: 0.70;
 }
 
 .post-content ul {
 	padding-left: 50px;
+}
+
+.post-content img {
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #oss {

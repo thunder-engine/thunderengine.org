@@ -1,70 +1,70 @@
 ---
 layout: post
-title: Мысли вслух о том, что делает код продуктом
+title: Thoughts Out Loud on What Makes Code a Product
 image: /media/GitHub.png
 tags:
   - Community
   - Development
 pinned: true
 ---
-Последние несколько дней я много размышлял о пройденном пути и о том, сколько ещё предстоит сделать.
+Over the past few days, I've been thinking a lot about the journey so far and how much still lies ahead.
 
-И пришёл к простой, но важной истине:
-**Сделать игровой движок массовым продуктом в одиночку — невозможно.**
+And I came to a simple but important truth:
+**Making a game engine into a mass-market product alone is impossible.**
 
-Да, можно написать код, который:
-- Рисует графику
-- Считает физику
-- Исполняет скрипты
-- И даже собрать редактор
+Yes, you can write code that:
+- Renders graphics
+- Computes physics
+- Executes scripts
+- And even put together an editor
 
-**Но это не делает код продуктом.**
+**But that doesn't make the code a product.**
 
-Что превращает код в продукт?
-Ответ прост — **пользователи.**
+What turns code into a product?
+The answer is simple — **users.**
 
-Продукт — это когда пользователи видят перед собой не "кучу кода", а понятный инструмент. Когда есть:
+A product is when users see not a "pile of code" but a comprehensible tool. When there is:
 
-📚 **Документация** — чтобы разобраться
+📚 **Documentation** — to understand how it works
 
-🎥 **Видеоуроки** — для тех, кто предпочитает смотреть
+🎥 **Video tutorials** — for those who prefer to watch
 
-🧩 **Примеры** — чтобы вдохновляться и учиться
+🧩 **Examples** — to get inspired and learn
 
-🌐 **Портал с ясной структурой** и понятными целями развития
+🌐 **A portal with a clear structure** and understandable development goals
 
-**Под силу ли это одному человеку в контексте игрового движка?**
-Мой ответ — НЕТ.
+**Is this feasible for one person in the context of a game engine?**
+My answer is NO.
 
-Поэтому, если вам близка разработка движков — присоединяйтесь! Вместе у нас гораздо больше шансов создать что-то по-настоящему прекрасное. 🤝
+So, if game engine development resonates with you — join in! Together, we have a much better chance of creating something truly great. 🤝
 
-На данный момент проект можно условно разделить на **5 ключевых направлений.** Если у вас есть знания и, главное, желание — вы можете внести вклад в любое из них!
+At the moment, the project can be conditionally divided into **5 key areas.** If you have the knowledge and, most importantly, the desire — you can contribute to any of them!
 
 **⚙️ Thunder Engine**  
-*Стек: C++, OpenGL, Vulkan, Metal*  
-Ядро движка с его модулями. Здесь живёт вся графика, физика, скрипты и архитектура.  
+*Stack: C++, OpenGL, Vulkan, Metal*  
+The core of the engine with its modules. This is where all the graphics, physics, scripts, and architecture live.  
 🔗 https://github.com/thunder-engine/thunder
 
 **🛠 WorldEditor**  
-*Стек: C++, Qt*  
-Редактор миров: сборка сцен, управление ассетами, инструменты разработчика.  
+*Stack: C++, Qt*  
+The world editor: scene composition, asset management, developer tools.  
 🔗 https://github.com/thunder-engine/thunder
 
 **📚 Documentation**  
-*Стек: reStructuredText, Sphinx, Python, QDoc*  
-Документация к редактору + автоматически генерируемая документация по API.  
+*Stack: reStructuredText, Sphinx, Python, QDoc*  
+Documentation for the editor + automatically generated API documentation.  
 🔗 https://github.com/thunder-engine/thunder-doc  
 
 **🖥 Thunder Hub**  
-*Стек: C++, Qt, QML*  
-Приложение-лаунчер для управления проектами и установленными версиями движка.  
+*Stack: C++, Qt, QML*  
+A launcher application for managing projects and installed engine versions.  
 🔗 https://github.com/thunder-engine/thunder-hub
 
 **🌐 Website**  
-*Стек: HTML, GitHub Pages, Jekyll*  
-Официальный сайт проекта. В будущем — платформа для сетевых сервисов.  
+*Stack: HTML, GitHub Pages, Jekyll*  
+The official project website. In the future — a platform for network services.  
 🔗 https://github.com/thunder-engine/thunderengine.org
 
-Этот список будет расти — появятся новые проекты и направления.
-Если вам близка какая-то из тем — присоединяйтесь!
-**Вместе мы сможем больше! 🚀**
+This list will grow — new projects and areas will emerge.
+If any of these topics resonate with you — join in!
+**Together, we can achieve more! 🚀**

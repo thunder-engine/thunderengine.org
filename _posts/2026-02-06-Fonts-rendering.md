@@ -1,25 +1,24 @@
 ---
 layout: post
-title: Рендеринг текста - новый подход для малых шрифтов
+title: Text Rendering - A New Approach for Small Glyphs
 image: /media/2026-02-06.jpg
 tags:
   - Development
 pinned: false
 ---
-Отображение текста — критически важная часть любого игрового движка. Без текста нет интерфейсов, нет диалогов, нет информации.
+Text rendering is a critical part of any game engine. Without text, there are no interfaces, no dialogues, no information.
 
-Долгое время в Thunder Engine использовался **SDF-рендеринг глифов**, который отлично справлялся с крупными надписями, но оказался неидеальным для текста малого размера. Глифы теряли чёткость, выглядели размыто — идеального качества добиться не удавалось.
+For a long time, Thunder Engine used SDF glyph rendering, which worked great for large text but proved less than ideal for small font sizes. Glyphs lost sharpness and appeared blurry—achieving perfect quality wasn't possible.
 
-**🔍 Что я заметил:**
-Unreal Engine для UI-текста использует не SDF, а **обычные растровые глифы**. И это выглядит значительно лучше при малых размерах!
+🔍 What I noticed:
+Unreal Engine doesn't use SDF for UI text—it uses regular bitmap glyphs instead. And this looks significantly better at small sizes!
 
-**⚙️ Что сделано:**
-После масштабного рефакторинга и оптимизации системы рендеринга текста я создал **Pull Request**, который добавляет поддержку **опции отрисовки без SDF**. Теперь можно будет выбирать между:
+⚙️ What's been done:
+After a major refactoring and optimization of the text rendering system, I created a Pull Request that adds support for a non-SDF rendering option. Now you can choose between:
 
-✅ SDF для крупных, стильных надписей
-✅ Растровые глифы для мелкого читаемого текста
-
+✅ SDF for large, stylized text
+✅ Bitmap glyphs for small, readable text
 
 ![BeforeAndAfter](/media/2026-02-06.jpg)
 
-Этот шаг не только улучшит качество интерфейсов, но и расширит возможности дизайна.
+This step will not only improve the quality of interfaces but also expand design possibilities.
