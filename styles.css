@@ -25,6 +25,9 @@ body {
 	max-width: 100%;
 	z-index: -1;
 	height: 788px;
+}
+
+.body-image img {
 	width: 100%;
 }
 
