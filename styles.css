@@ -19,7 +19,6 @@ body {
 }
 
 .body-image {
-	background-image: linear-gradient(to bottom, transparent 70%, #13495C 100%), url('imges/hero.jpg');
 	background-size: cover;
 	background-position: center;
 	position: absolute;
@@ -27,6 +26,16 @@ body {
 	z-index: -1;
 	height: 788px;
 	width: 100%;
+}
+
+.body-image::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, transparent 70%, #13495C 100%);
 }
 
 /* Style the header and navigation */
