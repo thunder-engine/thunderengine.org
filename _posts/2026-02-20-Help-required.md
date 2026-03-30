@@ -16,11 +16,11 @@ Plans include:
 But to be honest, I'm critically short on time. Engine development takes up almost 100% of my resources, and the website is also an important part of the ecosystem.
 
 If you have:
-✅ A desire to help the project
-✅ Skills in frontend development / web design
-✅ Ideas for improving the website
-✅ Or just free time and enthusiasm
+- A desire to help the project
+- Skills in frontend development / web design
+- Ideas for improving the website
+- Or just free time and enthusiasm
 
-I'd be happy to receive any help! 🙏
+I'd be happy to receive any support!
 
-Together, we can make the Thunder Engine website convenient and beautiful! 🚀
+Together, we can make the Thunder Engine website convenient and beautiful!

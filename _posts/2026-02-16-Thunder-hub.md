@@ -14,8 +14,7 @@ The past week has been unusual — I decided to take a break from engine develop
 **What is Thunder Hub?**  
 It's a separate project, a kind of **editor launcher**, designed to simplify interaction with your projects and engine versions.
 
-**🔧 Key features:**
-
+**Key features:**
 - Thunder Engine project management
 - Control over installed engine versions
 - Downloading new releases

@@ -25,46 +25,43 @@ The answer is simple — **users.**
 
 A product is when users see not a "pile of code" but a comprehensible tool. When there is:
 
-📚 **Documentation** — to understand how it works
-
-🎥 **Video tutorials** — for those who prefer to watch
-
-🧩 **Examples** — to get inspired and learn
-
-🌐 **A portal with a clear structure** and understandable development goals
+- **Documentation** — to understand how it works
+- **Video tutorials** — for those who prefer to watch
+- **Examples** — to get inspired and learn
+- **A portal with a clear structure** and understandable development goals
 
 **Is this feasible for one person in the context of a game engine?**
 My answer is NO.
 
-So, if game engine development resonates with you — join in! Together, we have a much better chance of creating something truly great. 🤝
+So, if game engine development resonates with you — join in! Together, we have a much better chance of creating something truly great.
 
 At the moment, the project can be conditionally divided into **5 key areas.** If you have the knowledge and, most importantly, the desire — you can contribute to any of them!
 
-**⚙️ Thunder Engine**  
+**Thunder Engine**  
 *Stack: C++, OpenGL, Vulkan, Metal*  
 The core of the engine with its modules. This is where all the graphics, physics, scripts, and architecture live.  
-🔗 https://github.com/thunder-engine/thunder
+https://github.com/thunder-engine/thunder
 
-**🛠 WorldEditor**  
+**WorldEditor**  
 *Stack: C++, Qt*  
 The world editor: scene composition, asset management, developer tools.  
-🔗 https://github.com/thunder-engine/thunder
+https://github.com/thunder-engine/thunder
 
-**📚 Documentation**  
+**Documentation**  
 *Stack: reStructuredText, Sphinx, Python, QDoc*  
 Documentation for the editor + automatically generated API documentation.  
-🔗 https://github.com/thunder-engine/thunder-doc  
+https://github.com/thunder-engine/thunder-doc  
 
-**🖥 Thunder Hub**  
+**Thunder Hub**  
 *Stack: C++, Qt, QML*  
 A launcher application for managing projects and installed engine versions.  
-🔗 https://github.com/thunder-engine/thunder-hub
+https://github.com/thunder-engine/thunder-hub
 
-**🌐 Website**  
+**Website**  
 *Stack: HTML, GitHub Pages, Jekyll*  
 The official project website. In the future — a platform for network services.  
-🔗 https://github.com/thunder-engine/thunderengine.org
+https://github.com/thunder-engine/thunderengine.org
 
 This list will grow — new projects and areas will emerge.
 If any of these topics resonate with you — join in!
-**Together, we can achieve more! 🚀**
+**Together, we can achieve more!**
