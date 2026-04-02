@@ -10,14 +10,15 @@ permalink: /blog/
 <section id="post">
 	<div class="content-grid">
 {% for post in site.posts %}
-		<div class="content-card">
-			<div class="content-block">
-				<img src="{{ post.image }}">
-				<h3 id="editor-title">{{ post.title }}</h3>
-				{{ post.excerpt }}
-				<a href="{{ post.url }}" class="content-button">Read More</a>
+		<a href="{{ post.url }}">
+			<div class="content-card">
+				<div class="content-block">
+					<img src="{{ post.image }}">
+					<h3 id="editor-title">{{ post.title }}</h3>
+					{{ post.excerpt }}
+				</div>
 			</div>
-		</div>
+		</a>
 {% endfor %}
 	</div>
 </section>
