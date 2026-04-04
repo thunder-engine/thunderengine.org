@@ -5,7 +5,7 @@ image: /media/GitHub.png
 tags:
   - Community
   - Development
-pinned: true
+pinned: false
 ---
 Over the past few days, I've been thinking a lot about the journey so far and how much still lies ahead.
 
