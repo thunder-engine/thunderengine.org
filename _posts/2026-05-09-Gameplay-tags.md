@@ -1,16 +1,11 @@
 ---
 layout: post
-title: Gameplay Tags
+title: Gameplay Tags, Groups, and Dynamic Properties
 image: /media/Crates.png
 tags:
   - Development
 pinned: false
 ---
-
-# Gameplay Tags, Groups, and Dynamic Properties: Tagging in Thunder Engine
-
-## Introduction
-
 A couple of months ago, someone asked me: "Does Thunder Engine have Gameplay Tags like Unreal Engine?" I hadn't heard of such a feature. I decided to look into what kind of beast it was, and also checked Unity and Godot on the matter. That's how the journey toward a tag and group system began — the one I'll talk about in this article.
 
 ## What Gameplay Tags Are in Unreal Engine
