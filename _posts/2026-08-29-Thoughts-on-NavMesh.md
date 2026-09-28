@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Thoughts on NavMesh
-image: /media/NavMesh.jpg
+image: /media/2026-08-29.jpg
 tags:
   - Development
 pinned: false
 ---
 A long-planned feature — NavMesh — has finally moved forward. Right now I'm thinking about how to organize resource loading and the management of this asset as a whole. In this article, I'll talk about the difficulties, the approaches, and the first results.
 
+![Navigation Mesh](/media/2026-08-29.jpg)
 ## What the Difficulty Is
 
 NavMesh is an asset that depends on your scene or map. It defines the area that monsters and heroes can move through. Consequently:
