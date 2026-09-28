@@ -6,6 +6,7 @@ tags:
   - Development
 pinned: false
 ---
+
 A long-planned feature — NavMesh — has finally moved forward. Right now I'm thinking about how to organize resource loading and the management of this asset as a whole. In this article, I'll talk about the difficulties, the approaches, and the first results.
 
 ![Navigation Mesh](/media/2026-08-29.jpg)

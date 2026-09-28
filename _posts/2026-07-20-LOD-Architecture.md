@@ -6,6 +6,7 @@ tags:
   - Development
 pinned: false
 ---
+
 Game engine development is a constant search for balance between convenience, performance, and ease of maintenance. In this article, I'll talk about how LOD support for geometry came to be in ThunderEngine. It's a story about how architectural decisions are born — from the first ideas to a working implementation.
 
 ## Part 1. Understanding LOD
