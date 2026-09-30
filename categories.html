@@ -10,13 +10,20 @@ permalink: /blog/
 <section id="hero">
 	<div class="post-hero">
 		<a href="{{ hero_post.url }}">
-			<img src="{{ hero_post.image }}" alt="{{ hero_post.title }}">
-			<h1>{{ hero_post.title }}</h1>
-			<div class="post-tag">Pinned</div>
+			<div class="hero-card">
+				<img src="{{ hero_post.image }}" alt="{{ hero_post.title }}">
+				<div class="hero-text">
+					<h1>{{ hero_post.title }}</h1>
+					<div class="post-tag">Pinned</div>
+					<p>{{ hero_post.excerpt | strip_html | truncate: 200 }}</p>
+					<div class="content-button">Read more</div>
+				</div>
+			</div>
 		</a>
 	</div>
 </section>
 {% endif %}
+
 <section id="post">
 	<div class="content-grid">
 {% for post in site.posts %}
@@ -32,6 +39,7 @@ permalink: /blog/
 {% endfor %}
 	</div>
 </section>
+
 <section id="ready">
     <div class="hero-content"></div>
 </section>
