@@ -4,9 +4,19 @@ title: Thunder Engine Development Blog
 permalink: /blog/
 ---
 <div class="body-image"><img src="/imges/community.jpg"></div>
+{% assign pinned_posts = site.posts | where: "pinned", true %}
+{% if pinned_posts.size > 0 %}
+{% assign hero_post = pinned_posts | first %}
 <section id="hero">
-	<div class="post-hero"></div>
+	<div class="post-hero">
+		<a href="{{ hero_post.url }}">
+			<img src="{{ hero_post.image }}" alt="{{ hero_post.title }}">
+			<h1>{{ hero_post.title }}</h1>
+			<div class="post-tag">Pinned</div>
+		</a>
+	</div>
 </section>
+{% endif %}
 <section id="post">
 	<div class="content-grid">
 {% for post in site.posts %}

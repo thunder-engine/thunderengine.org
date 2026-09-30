@@ -151,6 +151,7 @@ a:hover, a:active {
 	height: 100%;
 	border-radius: 8px;
 	color: #333;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .content-grid {
@@ -223,18 +224,21 @@ a:hover, a:active {
 
 #about {
 	background-color: #424242A0;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 	backdrop-filter: blur(10px);
 	color: #fff;
-	max-width: 1400px;
 	margin: 0px auto;
-	border-radius: 8px 8px 0px 0px;
+	padding: 10px 10px;
 }
 
 #desc {
 	background-color: #F0F0F0;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-	max-width: 1400px;
+	margin: 0px auto;
+	padding: 10px 10px;
+}
+
+#oss {
+	background-color: #424242A0;
+	color: #fff;
 	margin: 0px auto;
 }
 
@@ -306,17 +310,9 @@ a:hover, a:active {
   margin-right: auto;
 }
 
-#oss {
-	background-color: #424242A0;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-	color: #fff;
-	max-width: 1400px;
-	margin: 0px auto;
-	border-radius: 0px 0px 8px 8px;
-}
-
 .about-grid {
 	display: grid;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about-block {
@@ -376,7 +372,7 @@ a:hover, a:active {
 
 .hero-content {
 	background-color: #0000;
-	padding: 220px 0px;
+	padding: 200px 0px;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1000px;
@@ -392,6 +388,7 @@ a:hover, a:active {
 .hero-content p {
 	font-size: 16px;
 	margin-bottom: 40px;
+	color: #ffffff8c;
 }
 
 .hero-content a:link, .hero-content a:visited {
@@ -436,6 +433,7 @@ a:hover, a:active {
     border-radius: 8px;
     min-width: 150px;
     text-align: center;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .stat-number {
