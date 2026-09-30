@@ -410,10 +410,9 @@ a:hover, a:active {
 	display: flex;
 	align-items: stretch;
 	gap: 20px;
-	background: #fff;
+	background: transparent;
 	border-radius: 8px;
 	overflow: hidden;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-card img {
@@ -423,6 +422,7 @@ a:hover, a:active {
 	border-radius: 8px;
 	flex-shrink: 0;
 	margin: 0;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text {
@@ -430,21 +430,20 @@ a:hover, a:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 20px 20px 20px 0;
-	color: #333;
+	color: #fff;
 }
 
 .hero-text h1 {
-	font-size: 28px;
+	font-size: 36px;
 	margin: 0 0 10px 0;
-	color: #333;
+	color: #fff;
 }
 
 .hero-text p {
 	font-size: 16px;
 	line-height: 25px;
-	opacity: 0.70;
 	margin: 0 0 15px 0;
+	color: #ffffff8c;
 }
 
 .hero-text .content-button {
@@ -454,7 +453,7 @@ a:hover, a:active {
 	width: auto;
 	text-align: left;
 	font-weight: bold;
-	color: #2C8197;
+	color: #fff;
 }
 
 #hero .post-hero a:hover {
@@ -464,10 +463,11 @@ a:hover, a:active {
 #hero .post-tag {
 	display: inline-block;
 	padding: 4px 16px;
-	background-color: #13495C;
+	background-color: #ffffff26;
 	color: #fff;
+	text-decoration: none;
 	border-radius: 16px;
-	font-size: 14px;
+	font-size: 16px;
 	margin-bottom: 10px;
 	align-self: flex-start;
 }
@@ -586,5 +586,19 @@ a:hover, a:active {
 	}
 	.about-img-block img {
 		border-radius: 8px 0px 0px 8px;
+	}
+}
+
+/* Hero pinned post — adaptive */
+@media (max-width: 700px) {
+	.hero-card {
+		flex-direction: column;
+	}
+	.hero-card img {
+		width: 100%;
+		height: 200px;
+	}
+	.hero-text h1 {
+		font-size: 28px;
 	}
 }
