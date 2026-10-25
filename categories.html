@@ -14,9 +14,9 @@ permalink: /blog/
 				<img src="{{ hero_post.image }}" alt="{{ hero_post.title }}">
 				<div class="hero-text">
 					<h1>{{ hero_post.title }}</h1>
-					<div class="post-tag">Pinned</div>
+					<div class="post-tag" data-i18n="blog.pinned">Pinned</div>
 					<p>{{ hero_post.excerpt | strip_html | truncate: 200 }}</p>
-					<div class="content-button">Read more</div>
+					<div class="content-button" data-i18n="blog.readMore">Read more</div>
 				</div>
 			</div>
 		</a>

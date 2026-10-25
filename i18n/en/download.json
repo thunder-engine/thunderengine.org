@@ -1,0 +1,16 @@
+{
+  "hero.title": "Thunder Hub: Download our application",
+  "hero.paragraph": "We have detected your operating system and are offering the most suitable version of the application",
+  "about.title": "Thunder Engine",
+  "about.downloadLatest": "Download the latest release",
+  "about.viewRelease": "View release on GitHub",
+  "about.archiveQuestion": "Looking for a previous release?",
+  "about.archive": "Release archive",
+  "samples.title": "Sample projects",
+  "samples.paragraph": "Explore example projects built with Thunder Engine",
+  "samples.flappy": "A Flappy Bird clone demonstrating 2D physics, collision detection, and procedural content generation.",
+  "samples.2048": "A 2048 puzzle game showcasing grid-based logic, state management, and input handling.",
+  "samples.mine": "A Minecraft-like 3D project with block placement, free movement, and flight mechanics.",
+  "samples.match3": "A Match-3 puzzle game with match detection, chain reactions, and combo scoring.",
+  "samples.viewRepo": "View repository"
+}

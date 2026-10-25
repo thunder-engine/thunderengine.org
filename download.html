@@ -3,10 +3,11 @@ layout: default
 title: Download - Thunder Engine
 ---
 
+<div class="body-image"><img src="imges/download.jpg"></div>
 <section id="hero">
     <div class="hero-content">
-        <h1>Thunder Engine: Скачайте наше приложение</h1>
-        <p id="hero-paragraph">Мы определили вашу операционную систему и предлагаем наиболее подходящую версию приложения</p>
+        <h1 data-i18n="hero.title">Thunder Hub: Download our application</h1>
+        <p id="hero-paragraph" data-i18n="hero.paragraph">We have detected your operating system and are offering the most suitable version of the application</p>
 		<div id="download-container">
 			
 		</div>
@@ -14,13 +15,39 @@ title: Download - Thunder Engine
 </section>
 <section id="about">
     <div class="content">
-        <h2>Supported platforms</h2>
+        <h2 data-i18n="about.title">Thunder Engine</h2>
 		<div class="about-grid">
-			<div class="manual-select">
-				<h3>Или выберите вручную:</h3>
-				<button class="btn btn-windows" data-os="Windows">Windows</button>
-				<button class="btn btn-mac" data-os="MacOS">MacOS</button>
-				<button class="btn btn-linux" data-os="Linux">Linux</button>
+			<div class="about-img-block">
+				<img src="imges/open-source.jpg">
+			</div>
+			<div class="about-block">
+				<div class="download-center-block">
+					<p data-i18n="about.downloadLatest">Download the latest release</p>
+					<div class="os-tabs">
+						<a class="os-tab" data-os="Windows" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-windows-x64.7z" target="_blank">
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 3.61L9.34 2.8 9.34 11.18H0V3.61zM10.05 2.71L23.5 1.5v10.05H10.05V2.71zM0 11.9h9.34v8.38L0 19.47v-7.57zM10.05 19.62l13.45 1.21V10.3H10.05v9.32z"/></svg>
+							<span>Windows</span>
+						</a>
+						<a class="os-tab" data-os="MacOS" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-macosx-arm64.7z" target="_blank">
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.52 0-2.01.77-3.27.82-1.26.05-2.26-1.37-3.08-2.61C2.98 16.89 2.13 12.34 4.1 9.42c1.21-1.75 3.16-2.84 5.24-2.87 1.29-.02 2.51.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.65 1.98-.09.06-2.17 1.28-2.15 3.81.02 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.35 2.94zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.57-.34 3.11-1.2 4.2-1.03 1.31-2.45 2.05-3.9 1.94-.15-1.48.44-3.02 1.16-3.84z"/></svg>
+							<span>macOS</span>
+						</a>
+						<a class="os-tab" data-os="Linux" href="https://github.com/thunder-engine/thunder/releases/latest/download/ThunderEngine-linux-x86_64.7z" target="_blank">
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+							<span>Linux</span>
+						</a>
+					</div>
+					<div class="release-info">
+						<h3>Release <span id="release-version"></span></h3>
+						<span id="release-date"></span>
+						<ul class="release-notes" id="release-notes"></ul>
+					</div>
+					<a class="release-link" id="release-link" href="https://github.com/thunder-engine/thunder/releases/latest" target="_blank" data-i18n="about.viewRelease">View release on GitHub</a>
+					<div class="archive-row">
+						<span data-i18n="about.archiveQuestion">Looking for a previous release?</span>
+						<a class="archive-link" href="https://github.com/thunder-engine/thunder/releases" target="_blank" data-i18n="about.archive">Release archive</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -45,33 +72,101 @@ title: Download - Thunder Engine
                 return 'Unknown';
             }
             
-            function getDownloadLink(os) {
+            function getHubDownloadLink(os) {
                 const links = {
-                    'Windows': 'https://example.com/download/windows/app-setup.exe',
-                    'MacOS': 'https://example.com/download/mac/app-installer.dmg',
-                    'Linux': 'https://example.com/download/linux/app.tar.gz',
+                    'Windows': 'https://github.com/thunder-engine/thunder-hub/releases/latest/download/ThunderHub.exe',
+                    'MacOS': 'https://github.com/thunder-engine/thunder-hub/releases/latest/download/ThunderHub.dmg',
+                    'Linux': 'https://github.com/thunder-engine/thunder-hub/releases/latest/download/ThunderHub.7z',
                 };
                 
-                return links[os] || 'https://example.com/download';
+                return links[os] || 'https://github.com/thunder-engine/thunder-hub/releases/latest';
             }
             
-            function showDownloadLink(os) {
+            function showHubDownloadLink(os) {
                 const container = document.getElementById('download-container');
-                const downloadLink = getDownloadLink(os);
+                const downloadLink = getHubDownloadLink(os);
                 
                 container.innerHTML = `
-                    <a href="${downloadLink}" target="_blank" class="cta-button">Скачать для ${os}</a>
+                    <a href="${downloadLink}" target="_blank" class="cta-button">${os}</a>
                 `;
             }
 
-			showDownloadLink(detectOS());
+            function loadReleaseInfo() {
+                fetch('https://api.github.com/repos/thunder-engine/thunder/releases/latest')
+                    .then(response => response.json())
+                    .then(release => {
+                        const versionEl = document.getElementById('release-version');
+                        const dateEl = document.getElementById('release-date');
+                        const notesEl = document.getElementById('release-notes');
+                        
+                        versionEl.textContent = release.tag_name;
+                        
+                        const date = new Date(release.published_at);
+                        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                        dateEl.textContent = `${date.getDate()}.${months[date.getMonth()]}.${date.getFullYear()}`;
+                        
+                        const body = release.body || '';
+                        const featuresMatch = body.match(/## Features\r?\n([\s\S]*?)(?=\r?\n##|$)/);
+                        if (featuresMatch) {
+                            const items = featuresMatch[1]
+                                .split('\n')
+                                .map(line => line.trim())
+                                .filter(line => line.startsWith('* ') || line.startsWith('- '))
+                                .map(line => line.slice(2))
+                                .slice(0, 5);
+                            notesEl.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+                        }
+                    })
+                    .catch(() => {});
+            }
+
+            const detectedOS = detectOS();
+            showHubDownloadLink(detectedOS);
+            loadReleaseInfo();
             
-            document.querySelectorAll('.manual-select .btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const selectedOS = this.getAttribute('data-os');
-                    showDownloadLink(selectedOS);
-                });
-            });
+            if (detectedOS !== 'Unknown') {
+                const detectedTab = document.querySelector(`.os-tab[data-os="${detectedOS}"]`);
+                if (detectedTab) detectedTab.classList.add('active');
+            }
         });
     </script>
+</section>
+<section id="samples">
+    <div class="content">
+        <h2 data-i18n="samples.paragraph">Explore example projects built with Thunder Engine</h2>
+        <div class="content-grid">
+			<div class="content-card">
+				<div class="content-block">
+					<img src="https://raw.githubusercontent.com/thunder-engine/sample-flappy/main/screen.png" alt="Flappy">
+					<h3>Flappy</h3>
+					<p data-i18n="samples.flappy">A Flappy Bird clone demonstrating 2D physics, collision detection, and procedural content generation.</p>
+					<a href="https://github.com/thunder-engine/sample-flappy" target="_blank" class="content-button" data-i18n="samples.viewRepo">View repository</a>
+				</div>
+			</div>
+			<div class="content-card">
+				<div class="content-block">
+					<img src="https://raw.githubusercontent.com/thunder-engine/sample-2048/main/screen.png" alt="2048">
+					<h3>2048</h3>
+					<p data-i18n="samples.2048">A 2048 puzzle game showcasing grid-based logic, state management, and input handling.</p>
+					<a href="https://github.com/thunder-engine/sample-2048" target="_blank" class="content-button" data-i18n="samples.viewRepo">View repository</a>
+				</div>
+			</div>
+			<div class="content-card">
+				<div class="content-block">
+					<img src="https://raw.githubusercontent.com/thunder-engine/sample-mine/main/screen.png" alt="Mine">
+					<h3>Mine</h3>
+					<p data-i18n="samples.mine">A Minecraft-like 3D project with block placement, free movement, and flight mechanics.</p>
+					<a href="https://github.com/thunder-engine/sample-mine" target="_blank" class="content-button" data-i18n="samples.viewRepo">View repository</a>
+				</div>
+			</div>
+			<div class="content-card">
+				<div class="content-block">
+					<img src="https://raw.githubusercontent.com/thunder-engine/sample-match3/main/screen.png" alt="Match 3">
+					<h3>Match 3</h3>
+					<p data-i18n="samples.match3">A Match-3 puzzle game with match detection, chain reactions, and combo scoring.</p>
+					<a href="https://github.com/thunder-engine/sample-match3" target="_blank" class="content-button" data-i18n="samples.viewRepo">View repository</a>
+				</div>
+			</div>
+        </div>
+    </div>
 </section>

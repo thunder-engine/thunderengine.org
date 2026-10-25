@@ -1,0 +1,16 @@
+{
+  "hero.title": "Thunder Hub：下载我们的应用",
+  "hero.paragraph": "我们已检测到您的操作系统，并为您推荐最合适的版本",
+  "about.title": "Thunder Engine",
+  "about.downloadLatest": "下载最新版本",
+  "about.viewRelease": "在 GitHub 上查看发布",
+  "about.archiveQuestion": "寻找之前的版本？",
+  "about.archive": "发布存档",
+  "samples.title": "示例项目",
+  "samples.paragraph": "探索使用 Thunder Engine 构建的示例项目",
+  "samples.flappy": "Flappy Bird 克隆，展示 2D 物理、碰撞检测和程序化内容生成。",
+  "samples.2048": "2048 益智游戏，展示网格逻辑、状态管理和输入处理。",
+  "samples.mine": "Minecraft 风格 3D 项目，包含方块放置、自由移动和飞行机制。",
+  "samples.match3": "Match-3 益智游戏，包含匹配检测、连锁反应和连击计分。",
+  "samples.viewRepo": "查看仓库"
+}
