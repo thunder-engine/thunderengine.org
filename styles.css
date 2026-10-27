@@ -306,6 +306,10 @@ a:hover, a:active {
   margin-right: auto;
 }
 
+.post-content a:link, .post-content a:visited {
+  color: #333;
+}
+
 .about-grid {
 	display: grid;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
