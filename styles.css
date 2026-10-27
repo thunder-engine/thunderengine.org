@@ -239,11 +239,9 @@ a:hover, a:active {
 }
 
 #post {
-	background-color: #F0F0F0;
+	background-color: #424242A0;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-	max-width: 1000px;
 	margin: 0px auto;
-	border-radius: 8px;
 }
 
 .post-hero {
