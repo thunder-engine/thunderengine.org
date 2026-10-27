@@ -48,7 +48,6 @@ header {
 	background-color: #424242A0;
 	backdrop-filter: blur(10px);
 	color: #fff;
-	padding: 10px 0;
 	display: flex;
 	width: 100%;
 	position: fixed;
