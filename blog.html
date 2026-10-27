@@ -28,16 +28,15 @@ permalink: /blog/
 	<div class="content">
 		<div class="content-grid">
 {% for post in site.posts %}
-			<a href="{{ post.url }}">
-				<div class="content-card">
-					<div class="content-block">
-						<img src="{{ post.image }}">
-						<h3 id="editor-title">{{ post.title }}</h3>
-						{{ post.excerpt }}
-					</div>
+			<div class="content-card">
+				<div class="content-block">
+					<img src="{{ post.image }}">
+					<h3 id="editor-title">{{ post.title }}</h3>
+					{{ post.excerpt }}
+					<div href="{{ post.url }}" class="content-button" data-i18n="blog.readMore">Read more</div>
 				</div>
-			</a>
-	{% endfor %}
+			</div>
+{% endfor %}
 		</div>
 	</div>
 </section>
