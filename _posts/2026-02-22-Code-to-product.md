@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thoughts Out Loud on What Makes Code a Product
-image: /media/GitHub.png
+image: /media/GitHub.jpg
 tags:
   - Community
   - Development

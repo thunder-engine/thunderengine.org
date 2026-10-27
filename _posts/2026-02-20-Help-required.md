@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Friends, I Need Help with the Thunder Engine Website!
-image: /media/Thunder.png
+image: /media/Gameworld.jpg
 tags:
   - Community
 pinned: false

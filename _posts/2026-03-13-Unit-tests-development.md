@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why You Need Unit Tests Even If You're Coding Alone (Part I)
-image: /media/Books.png
+image: /media/Books.jpg
 tags:
   - Development
 pinned: false

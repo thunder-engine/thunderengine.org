@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gameplay Tags, Groups, and Dynamic Properties
-image: /media/Crates.png
+image: /media/Crates.jpg
 tags:
   - Development
 pinned: false

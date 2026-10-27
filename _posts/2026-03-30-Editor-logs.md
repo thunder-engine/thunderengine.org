@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editor logs are now available! Plus a couple of important changes
-image: /media/Crates.png
+image: /media/Crates.jpg
 tags:
   - Development
 pinned: false
